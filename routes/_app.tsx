@@ -24,6 +24,53 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
+
+        <style
+          type="text/css"
+          dangerouslySetInnerHTML={{
+            __html: `          
+          @font-face {
+            font-family: 'THICCCBOI';
+            src: url("${
+              asset("/fonts/THICCCBOI-Medium.woff2")
+            }") format('woff2'),
+              }") format('truetype');
+            font-weight: normal;
+            font-style: semibold;
+            font-display: swap;
+        }
+        
+            @font-face {
+            font-family: 'THICCCBOI';
+            src: url("${asset("/fonts/THICCCBOI-Bold.woff2")}") format('woff2'),
+              }") format('truetype');
+            font-weight: normal;
+            font-style: bold;
+            font-display: swap;
+          }
+
+            @font-face {
+            font-family: 'THICCCBOI';
+            src: url("${
+              asset("/fonts/THICCCBOI-Regular.woff2")
+            }") format('woff2'),
+              }") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+            @font-face {
+            font-family: 'Unicons';
+            src: url("${asset("/fonts/Unicons.woff2")}") format('woff2'),
+              }") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        `,
+          }}
+        />
       </Head>
 
       {/* Rest of Preact tree */}
