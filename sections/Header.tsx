@@ -35,15 +35,15 @@ export const StyleType: Record<"background" | "color", string> = {
 };
 
 const generateLineStyles = (position: string) => `
-  absolute ${position} z-50 block h-0.5 w-7 bg-black transition-all duration-200 ease-out 
+  absolute ${position} z-50 block h-0.5 w-7 bg-base-100 transition-all duration-500 ease-out
 `;
 
 const lineStyles = [
   generateLineStyles("top-[-0.7rem]") +
-  "peer-checked:translate-y-[0.7rem] peer-checked:rotate-[45deg]",
+  "peer-checked:translate-y-[0.7rem] peer-checked:rotate-[45deg] peer-checked:-translate-x-[200%]",
   generateLineStyles("top-[-0.35rem]") + "peer-checked:opacity-0",
   generateLineStyles("top-[0]") +
-  "peer-checked:-translate-y-[0.2rem] peer-checked:-rotate-[45deg]",
+  "peer-checked:-translate-y-[0.2rem] peer-checked:-rotate-[45deg] peer-checked:-translate-x-[200%]",
 ];
 
 export default function Haader({
@@ -66,29 +66,36 @@ export default function Haader({
   },
 }: Nav) {
   return (
-    <nav class="container mx-auto lg:px-0 px-4">
-      <div class="flex gap-8 items-center justify-between py-4">
+    <nav class=" bg-primary w-full  ">
+      <div class="flex gap-8 items-center justify-between py-4 container mx-auto lg:px-0 px-4">
         <a href="/">
           <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
         </a>
 
         <label
-          class="cursor-pointer lg:hidden pt-6 relative z-40"
+          class="cursor-pointer lg:hidden pt-4 relative z-40 font-base "
           for="menu-mobile"
         >
           <input class="hidden peer" type="checkbox" id="menu-mobile" />
           {lineStyles.map((style, index) => (
             <div key={index} class={`relative ${style}`}></div>
           ))}
-          <div class="backdrop-blur-sm bg-black/50 fixed h-full hidden inset-0 peer-checked:block w-full z-40">
+          <div class="backdrop-blur-sm bg-black/50 fixed h-full hidden inset-0 peer-checked:block w-full z-40 ">
             &nbsp;
           </div>
-          <div class="duration-500 fixed h-full overflow-y-auto overscroll-y-none peer-checked:translate-x-0 right-0 top-0 transition translate-x-full w-full z-40">
-            <div class="bg-base-100 flex flex-col float-right gap-8 min-h-full pt-12 px-6 shadow-2xl w-1/2">
-              <ul class="flex flex-col gap-8">
+          <div class="duration-500 fixed h-full overflow-y-auto overscroll-y-none peer-checked:translate-x-0 left-0 top-0 transition -translate-x-full w-full z-40">
+            <div class="bg-primary flex flex-col float-left gap-6 min-h-full px-6 shadow-2xl w-10/12">
+              <span class="text-base-100 text-2.5xl font-bold py-8 font-thicccboi">
+                Catena
+              </span>
+              <ul class="flex flex-col gap-6">
                 {navigation?.links.map((link) => (
                   <li>
-                    <a href={link.url} aria-label={link.label}>
+                    <a
+                      href={link.url}
+                      aria-label={link.label}
+                      class="text-base-100 text-lg font-bold font-thicccboi"
+                    >
                       {link.label}
                     </a>
                   </li>
