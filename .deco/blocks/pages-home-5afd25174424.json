@@ -5,11 +5,28 @@
     {
       "__resolveType": "site/sections/Header.tsx",
       "navigation": {
-        "links": [],
+        "links": [
+          {
+            "label": "Diferenciais",
+            "url": "#diferenciais"
+          },
+          {
+            "label": "Como Funciona",
+            "url": "#como-funciona"
+          },
+          {
+            "label": "Depoimentos",
+            "url": "#depoimentos"
+          },
+          {
+            "label": "Cases",
+            "url": "/Cases"
+          }
+        ],
         "buttons": []
       },
       "logo": {
-        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/085b4d55-c987-4182-b8a8-96670506cd8b",
+        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/6d36b9c0-0491-4138-87ee-47799519057c",
         "alt": "Catena"
       }
     },
