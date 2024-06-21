@@ -44,15 +44,20 @@ export default defineApp(async (_req, ctx) => {
             font-family: 'THICCCBOI';
             src: url("${
               asset("/fonts/THICCCBOI-Medium.woff2")
-            }") format('woff2');
-            font-weight: medium;
+            }") format('woff2'),
+                url("${
+              asset("/fonts/THICCCBOI-Medium.ttf")
+            }") format('truetype');
+            font-weight: 500;
             font-style: normal;
             font-display: swap;
         }
         
             @font-face {
             font-family: 'THICCCBOI';
-            src: url("${asset("/fonts/THICCCBOI-Bold.woff2")}") format('woff2');
+            src: url("${
+              asset("/fonts/THICCCBOI-Bold.woff2")
+            }") format('woff2'),;
             font-weight: bold;
             font-style: bold;
             font-display: swap;

@@ -44,9 +44,22 @@
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p>Click here to tweak this text however you want.</p>",
+      "title": "Candidatos qualificados para sua vaga ",
       "description": "This text is entirely editable, tailor it freely.",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/ef216aec-e11c-4f1a-91a5-3f2ec4b56c34"
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/cc407ff4-4f6d-479b-829f-c7803eea51b6",
+      "titleUnderline": "em até 72h",
+      "subTitle": "<p>Saia dos bancos de talentos genéricos e descubra recrutamento &amp; seleção feito para você!</p>",
+      "list": [
+        "Perfis completos em até 72 horas",
+        "Por menos de 1 salário",
+        "Com suporte e garantia estendida"
+      ],
+      "CTA": {
+        "href": "#simulacao",
+        "label": "QUERO CANDIDATOS"
+      },
+      "preload": true,
+      "alt": "Catena"
     },
     {
       "__resolveType": "site/sections/MainPost.tsx",

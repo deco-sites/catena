@@ -1,95 +1,71 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-
-export interface CTA {
-  id?: string;
-  href: string;
-  text: string;
-  outline?: boolean;
-}
+import ButtonSimple from "site/components/ui/Buttton/ButtonSimple.tsx";
 
 export interface Props {
-  /**
-   * @format rich-text
-   * @default Click here to tweak this text however you want.
-   */
-  title?: string;
-  description?: string;
-  image?: ImageWidget;
-  placement?: "left" | "right";
-  cta?: CTA[];
+  title: string;
+  titleUnderline: string;
+  subTitle: HTMLWidget;
+  list: string[];
+  CTA: {
+    label: string;
+    href: string;
+  };
+  image: ImageWidget;
+  alt?: string;
+  preload?: boolean;
 }
 
-const PLACEMENT = {
-  left: "flex-col text-left lg:flex-row-reverse",
-  right: "flex-col text-left lg:flex-row",
-};
+export default function Hero(
+  props: Props,
+) {
+  const {
+    title,
+    titleUnderline,
+    subTitle,
+    list,
+    CTA,
+    image,
+    alt,
+    preload = false,
+  } = props;
 
-export default function HeroFlats({
-  title = "Click here to tweak this text however you want.",
-  description = "This text is entirely editable, tailor it freely.",
-  image,
-  placement = "left",
-  cta,
-}: Props) {
   return (
-    <div>
-      <div class="flex flex-col gap-8 items-center mx-auto">
-        <div
-          class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
-            image
-              ? PLACEMENT[placement]
-              : "flex-col items-center justify-center text-center"
-          } lg:pt-36 lg:pb-20 gap-12 md:gap-20 items-center`}
-        >
-          {image && (
-            <Image
-              width={640}
-              class="lg:w-1/2 object-fit w-full"
-              sizes="(max-width: 640px) 100vw, 30vw"
-              src={image}
-              alt={image}
-              decoding="async"
-              loading="lazy"
-            />
-          )}
-          <div
-            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
-              image
-                ? "lg:w-1/2 lg:max-w-xl"
-                : "flex flex-col items-center justify-center lg:max-w-3xl"
-            }`}
+    <div class="w-full bg-primary h-full mt-24 mb-9 after:border-l-[100vw] after:border-l-primary relative after:border-b-[4rem] after:-bottom-[3.995rem] after:border-transparent after:absolute after:bg-transparent after:-z-10 after:left-0 after:right-0">
+      <div class="lg:container flex flex-col lg:flex-row px-3 pt-6 ">
+        <div class="flex flex-col text-base-100 font-thicccboi gap-5">
+          <h2 class="font-bold text-xl">
+            {title}
+            <span class=" after-bg-custom relative ">{titleUnderline}</span>
+          </h2>
+          <span
+            class="text-base mb-7 font-medium"
+            dangerouslySetInnerHTML={{ __html: subTitle }}
           >
-            <div
-              class="font-medium inline-block leading-[100%] lg:text-[80px] text-4xl tracking-[-2.4px]"
-              dangerouslySetInnerHTML={{
-                __html: title,
-              }}
-            >
-            </div>
-            <p class="leading-[150%] md:text-md text-lg">
-              {description}
-            </p>
-            {cta && cta.length > 0 &&
-              (
-                <div class="flex gap-3 items-center lg:pt-20">
-                  {cta?.map((item) => (
-                    <a
-                      key={item?.id}
-                      id={item?.id}
-                      href={item?.href}
-                      target={item?.href.includes("http") ? "_blank" : "_self"}
-                      class={`font-normal btn btn-primary ${
-                        item.outline && "btn-outline"
-                      }`}
-                    >
-                      {item?.text}
-                    </a>
-                  ))}
-                </div>
-              )}
-          </div>
+          </span>
+          <ul class="flex flex-col gap-2 mb-6 font-medium">
+            {list.map((item) => (
+              <li class="text-[17px] before:content-['\e9dd'] before:mr-2 before:font-unicons">
+                {item}
+              </li>
+            ))}
+          </ul>
+          <ButtonSimple
+            label={CTA.label}
+            href={CTA.href}
+            class=" bg-secondary text-primary w-max"
+          />
         </div>
+        <Image
+          src={image}
+          alt={alt}
+          width={345}
+          height={380}
+          preload={preload}
+          fetchPriority={preload ? "high" : "low"}
+          loading={preload ? "eager" : "lazy"}
+          class=" -mb-32 mt-8"
+        />
       </div>
     </div>
   );
