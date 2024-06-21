@@ -1,18 +1,18 @@
 import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
+import ButtonArrowAnimation, {
+  Props as Button,
+} from "site/components/ui/Buttton/ButtonArrowAnimation.tsx";
+import ButtonLanguage, {
+  Language,
+} from "site/components/ui/Buttton/ButtonLanguage.tsx";
+import AnimationScroll from "../islands/header/AnimationHeader.tsx";
 
 type Type = "dark" | "light";
-
-export interface CTA {
-  id?: string;
-  href: string;
-  text: string;
-  outline?: boolean;
-}
-
 export interface Nav {
   logo?: {
     src?: ImageWidget;
+    srcDark?: ImageWidget;
     alt?: string;
   };
   navigation?: {
@@ -20,7 +20,8 @@ export interface Nav {
       label?: string;
       url?: string;
     }[];
-    buttons: CTA[];
+    languages: Language[];
+    button: Button;
   };
 }
 
@@ -40,10 +41,10 @@ const generateLineStyles = (position: string) => `
 
 const lineStyles = [
   generateLineStyles("top-[-0.7rem]") +
-  "peer-checked:translate-y-[0.7rem] peer-checked:rotate-[45deg] peer-checked:-translate-x-[200%]",
+  "peer-checked:translate-y-[0.7rem] peer-checked:rotate-[45deg] peer-checked:-translate-x-[250%]",
   generateLineStyles("top-[-0.35rem]") + "peer-checked:opacity-0",
   generateLineStyles("top-[0]") +
-  "peer-checked:-translate-y-[0.2rem] peer-checked:-rotate-[45deg] peer-checked:-translate-x-[200%]",
+  "peer-checked:-translate-y-[0.2rem] peer-checked:-rotate-[45deg] peer-checked:-translate-x-[250%]",
 ];
 
 export default function Haader({
@@ -59,98 +60,99 @@ export default function Haader({
       { label: "Princing", url: "/" },
       { label: "Contact", url: "/" },
     ],
-    buttons: [
-      { id: "change-me-1", href: "/", text: "Change me", outline: false },
-      { id: "change-me-2", href: "/", text: "Change me", outline: true },
+    languages: [
+      { label: "brasil", value: "pt", icon: "Change me" },
     ],
+    button: {
+      label: "Quero Me cadastrar",
+      href: "#cadastro",
+    },
   },
 }: Nav) {
   return (
-    <nav class=" bg-primary w-full  ">
-      <div class="flex gap-8 items-center justify-between py-4 container mx-auto lg:px-0 px-4">
-        <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
-        </a>
+    <AnimationScroll>
+      <nav class=" w-full">
+        <div class="flex gap-8 items-center justify-between py-4 xl:container mx-auto xl:px-0 px-4 min-h-24">
+          <a href="/">
+            <Image
+              data-img
+              src={logo.src || ""}
+              width={100}
+              height={28}
+              alt={logo.alt}
+              loading={"lazy"}
+              class="object-cover h-full w-auto max-w-48"
+            />
+            <Image
+              data-img-dark
+              src={logo.srcDark || ""}
+              width={100}
+              height={28}
+              alt={logo.alt}
+              loading={"lazy"}
+              class="object-cover h-full w-auto max-w-48 hidden"
+            />
+          </a>
 
-        <label
-          class="cursor-pointer lg:hidden pt-4 relative z-40 font-base "
-          for="menu-mobile"
-        >
-          <input class="hidden peer" type="checkbox" id="menu-mobile" />
-          {lineStyles.map((style, index) => (
-            <div key={index} class={`relative ${style}`}></div>
-          ))}
-          <div class="backdrop-blur-sm bg-black/50 fixed h-full hidden inset-0 peer-checked:block w-full z-40 ">
-            &nbsp;
-          </div>
-          <div class="duration-500 fixed h-full overflow-y-auto overscroll-y-none peer-checked:translate-x-0 left-0 top-0 transition -translate-x-full w-full z-40">
-            <div class="bg-primary flex flex-col float-left gap-6 min-h-full px-6 shadow-2xl w-10/12">
-              <span class="text-base-100 text-2.5xl font-bold py-8 font-thicccboi">
-                Catena
-              </span>
-              <ul class="flex flex-col gap-6">
-                {navigation?.links.map((link) => (
-                  <li>
-                    <a
-                      href={link.url}
-                      aria-label={link.label}
-                      class="text-base-100 text-lg font-bold font-thicccboi"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <ul class="flex items-center gap-3">
-                {navigation.buttons?.map((item) => (
-                  <a
-                    key={item?.id}
-                    id={item?.id}
-                    href={item?.href}
-                    target={item?.href.includes("http") ? "_blank" : "_self"}
-                    class={`font-normal btn btn-primary ${
-                      item.outline && "btn-outline"
-                    }`}
-                  >
-                    {item?.text}
-                  </a>
-                ))}
-              </ul>
+          <label
+            class="cursor-pointer lg:hidden pt-4 relative z-40 font-base "
+            for="menu-mobile"
+          >
+            <input class="hidden peer" type="checkbox" id="menu-mobile" />
+            {lineStyles.map((style, index) => (
+              <div key={index} data-lines class={`relative ${style}`}></div>
+            ))}
+            <div class="backdrop-blur-sm bg-black/50 fixed h-full hidden inset-0 peer-checked:block w-full z-40 ">
+              &nbsp;
             </div>
-          </div>
-        </label>
+            <div class="duration-500 fixed h-full overflow-y-auto overscroll-y-none peer-checked:translate-x-0 left-0 top-0 transition -translate-x-full w-full z-40">
+              <div class="bg-primary flex flex-col float-left gap-6 min-h-full px-6 shadow-2xl w-10/12">
+                <span class=" text-2.5xl font-bold py-8 font-thicccboi">
+                  Catena
+                </span>
+                <ul class="flex flex-col gap-6">
+                  {navigation?.links.map((link) => (
+                    <li>
+                      <a
+                        href={link.url}
+                        aria-label={link.label}
+                        class=" text-lg font-bold font-thicccboi"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <ButtonLanguage languages={navigation.languages} />
+              </div>
+            </div>
+          </label>
 
-        <ul class="hidden items-center justify-between lg:flex w-full">
-          <ul class="flex">
-            {navigation.links.map((link) => (
-              <li>
-                <a
-                  href={link.url}
-                  aria-label={link.label}
-                  class="link no-underline hover:underline p-4"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+          <ul class="hidden items-center lg:flex w-full justify-end">
+            <ul class="flex">
+              {navigation.links.map((link) => (
+                <li>
+                  <a
+                    href={link.url}
+                    aria-label={link.label}
+                    data-links
+                    class=" hover:opacity-80 no-underline p-4 font-bold font-thicccboi text-lg "
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div class="flex gap-5">
+              <ButtonLanguage languages={navigation.languages} />
+              <ButtonArrowAnimation
+                label={navigation.button.label}
+                href={navigation.button.href}
+              />
+            </div>
           </ul>
-          <ul class="flex gap-3">
-            {navigation.buttons?.map((item) => (
-              <a
-                key={item?.id}
-                id={item?.id}
-                href={item?.href}
-                target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
-                }`}
-              >
-                {item?.text}
-              </a>
-            ))}
-          </ul>
-        </ul>
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </AnimationScroll>
   );
 }

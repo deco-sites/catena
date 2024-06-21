@@ -23,17 +23,30 @@
             "url": "/Cases"
           }
         ],
-        "buttons": []
+        "buttons": [],
+        "button": {
+          "label": "Quero me Cadastrar ",
+          "href": "#cadastro"
+        },
+        "languages": [
+          {
+            "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/79cdcebd-d787-40b5-bfdc-f21cf26307e9",
+            "label": "EUA",
+            "value": "en"
+          }
+        ]
       },
       "logo": {
         "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/6d36b9c0-0491-4138-87ee-47799519057c",
-        "alt": "Catena"
+        "alt": "Catena",
+        "srcDark": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8cb5d0c3-a313-4a80-b888-cd373c800138"
       }
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
       "title": "<p>Click here to tweak this text however you want.</p>",
-      "description": "This text is entirely editable, tailor it freely."
+      "description": "This text is entirely editable, tailor it freely.",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/ef216aec-e11c-4f1a-91a5-3f2ec4b56c34"
     },
     {
       "__resolveType": "site/sections/MainPost.tsx",

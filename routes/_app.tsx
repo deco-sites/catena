@@ -28,23 +28,32 @@ export default defineApp(async (_req, ctx) => {
         <style
           type="text/css"
           dangerouslySetInnerHTML={{
-            __html: `          
+            __html: `      
+
+                    @font-face {
+            font-family: 'Acumin';
+            src: url("${
+              asset("/fonts/AcuminPro-Regular.woff2")
+            }") format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+            
           @font-face {
             font-family: 'THICCCBOI';
             src: url("${
               asset("/fonts/THICCCBOI-Medium.woff2")
-            }") format('woff2'),
-              }") format('truetype');
-            font-weight: normal;
-            font-style: semibold;
+            }") format('woff2');
+            font-weight: medium;
+            font-style: normal;
             font-display: swap;
         }
         
             @font-face {
             font-family: 'THICCCBOI';
-            src: url("${asset("/fonts/THICCCBOI-Bold.woff2")}") format('woff2'),
-              }") format('truetype');
-            font-weight: normal;
+            src: url("${asset("/fonts/THICCCBOI-Bold.woff2")}") format('woff2');
+            font-weight: bold;
             font-style: bold;
             font-display: swap;
           }
@@ -53,8 +62,7 @@ export default defineApp(async (_req, ctx) => {
             font-family: 'THICCCBOI';
             src: url("${
               asset("/fonts/THICCCBOI-Regular.woff2")
-            }") format('woff2'),
-              }") format('truetype');
+            }") format('woff2');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -62,8 +70,7 @@ export default defineApp(async (_req, ctx) => {
 
             @font-face {
             font-family: 'Unicons';
-            src: url("${asset("/fonts/Unicons.woff2")}") format('woff2'),
-              }") format('truetype');
+            src: url("${asset("/fonts/Unicons.woff2")}") format('woff2');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
