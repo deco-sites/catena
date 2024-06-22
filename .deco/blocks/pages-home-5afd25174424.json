@@ -299,7 +299,53 @@
       }
     },
     {
-      "__resolveType": "Footer"
+      "__resolveType": "site/sections/Footer.tsx",
+      "subscribe": {},
+      "logo": {
+        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e20443e3-52da-4344-9652-0c981a6ccef2",
+        "alt": "Catena"
+      },
+      "copyright": "© 2023 Catena Consultoria em Marketing LTDA. Todos os direitos reservados.",
+      "companyIcons": [
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/92d93831-2e40-458d-9d58-de68b8a2e4de",
+          "alt": "sebrae"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/b185b972-4eca-4ac2-bfc0-1db15ebcd9f9",
+          "alt": "inovabra"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/f410b023-a01f-4de1-bac2-484c18fa2e7c",
+          "alt": "open startups"
+        }
+      ],
+      "social": "Conecte-se com a Catena",
+      "icons": [
+        {
+          "network": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/2e10fdb9-f9a7-4684-8147-400d0f9c916b",
+          "href": "https://www.linkedin.com/company/catenawork/",
+          "alt": "linkedin"
+        },
+        {
+          "network": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/9bee8eb9-08af-48f2-8af6-4086d6777db2",
+          "alt": "Instagram",
+          "href": "https://www.instagram.com/catena.work/"
+        },
+        {
+          "network": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/02f9be26-75ac-4518-94f5-277261a53ce9",
+          "alt": "Facebook",
+          "href": "https://www.facebook.com/catena.work/"
+        },
+        {
+          "network": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/29405fc4-0f28-4f44-a6a0-195e82dc2fad",
+          "href": "https://api.whatsapp.com/send/?phone=5511982456735&text=Preciso+de+ajuda+para+contratar&type=phone_number&app_absent=0",
+          "alt": "Whatsapp"
+        }
+      ],
+      "location": "Avenida Angélica, 2529 – Inovabra Habitat, 7º Andar – Bela Vista, SP",
+      "email": "meajuda@catena.work",
+      "emailHref": "meajuda@catena.work"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
