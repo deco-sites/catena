@@ -248,6 +248,20 @@
       "subTitle": "Veja o que nossos clientes falam da gente!"
     },
     {
+      "__resolveType": "site/sections/Form.tsx",
+      "title": "Recrutamento profissional pode custar menos do que você pensa!",
+      "titleForm": "VAMOS FAZER UMA SIMULAÇÃO DE PREÇO?",
+      "subTitleForm": "É super simples! Não leva nem 2 minutos.",
+      "formPlaceholder": {
+        "name": "Nome",
+        "whatsapp": "Whatsapp",
+        "position": "Qual profissional você quer contratar?",
+        "wage": "Qual o salário mensal aproximado?",
+        "email": "Seu melhor e-mail"
+      },
+      "CTA": "FAZER SIMULAÇÃO"
+    },
+    {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",
