@@ -33,5 +33,9 @@
         "family": "Albert Sans"
       }
     ]
+  },
+  "mode": "light",
+  "complementaryColors": {
+    "base-200": "#aab0bc"
   }
 }

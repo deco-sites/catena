@@ -62,6 +62,25 @@
       "alt": "Catena"
     },
     {
+      "__resolveType": "site/sections/Differences.tsx",
+      "title": "<p>Buscando Candidatos Qualificados?</p>",
+      "subTitle": "<p>Recrutar com a Catena é diferente!</p>",
+      "cards": [
+        {
+          "title": "Comece com Candidatos",
+          "content": "<p>Esperar respostas de candidatos? Esqueça! Aqui você tem candidatos prontos para entrevista em 72 horas.</p>"
+        },
+        {
+          "title": "Saia do Passado",
+          "content": "<p>Assertividade de consultoria a preço de plataforma? A Catena reduz em 80% o custo e o tempo de recrutamento.</p>"
+        },
+        {
+          "title": "Contrate sem Medo",
+          "content": "<p>A gente sabe que recrutar é sempre difícil, por isso toda vaga na Catena inclui garantia estendida.</p>"
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",

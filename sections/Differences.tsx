@@ -18,21 +18,21 @@ export default function Diffenrence(props: Props) {
     const { title, subTitle, cards } = props
 
     return (
-        <div class="w-full h-full py-9">
-            <div class="w-full h-full flex flex-col gap-4 px-4">
-                <h2 dangerouslySetInnerHTML={{ __html: title }} class={"uppercase text-[17px]"}>
+        <div class="w-full h-full py-9 mt-16 md:mt-28">
+            <div class="w-full h-full flex flex-col gap-4 px-4 text-center justify-center items-center max-w-[1320px] mx-auto">
+                <h2 dangerouslySetInnerHTML={{ __html: title }} class={"uppercase text-[15px] font-bold text-base-200"}>
 
                 </h2>
-                <h3  class="text-2xl mb-5" dangerouslySetInnerHTML={{ __html: subTitle }}>
+                <h3 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7" dangerouslySetInnerHTML={{ __html: subTitle }}>
 
                 </h3>
-                <ul>
+                <ul class="flex flex-col gap-4 md:flex-row justify-center items-center lg:gap-10">
                     {cards.map((card) => (
-                        <li class="flex flex-col gap-2">
-                            <span class="text-xl">
+                        <li class="flex flex-col gap-2 md:w-[calc(33.333%-1rem)]">
+                            <span class="text-xl font-bold">
                                 {card.title}
                             </span>
-                            <span class="text-[17px]" dangerouslySetInnerHTML={{ __html: card.content }}>
+                            <span class="text-[17px] text-base-200 " dangerouslySetInnerHTML={{ __html: card.content }}>
 
                             </span>
                         </li>
