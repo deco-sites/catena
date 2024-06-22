@@ -81,6 +81,60 @@
       ]
     },
     {
+      "__resolveType": "site/sections/Companies.tsx",
+      "title": "Empresas que recrutam com a Catena",
+      "icons": [
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/79351660-28a0-478e-835f-b7506c0621fa",
+          "alt": "ALS"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8e53676f-7512-47e2-ad0f-6eb79b37f1f7",
+          "alt": "EST"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e70d78eb-9e72-4ad1-83c1-4d878965f84d",
+          "alt": "bionexo"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8737b3a5-bed7-46b7-a295-45d0cd347ae1",
+          "alt": "Tourinho"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/41841e3d-4bb8-4f98-a033-5969405318be",
+          "alt": "Exati"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/451fd979-0bd2-4ead-9975-13b9284f8027",
+          "alt": "Houer"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/4e694a15-6708-4f00-9add-bf62f6437e6f",
+          "alt": "Minify"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/202693f6-0957-461e-bd5b-06e7b1e303ad",
+          "alt": "Real"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/a59e45f6-feec-4915-89f7-ff1198a47e48",
+          "alt": "Teros"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/5b92d66e-3021-4d88-9b1f-b59d1c9f2469",
+          "alt": "tnsnano"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e09a3aa4-d9e1-4a60-9504-52883f0c5da9",
+          "alt": "Onii"
+        },
+        {
+          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/c917402b-6098-4662-bd37-a8140a0130ed",
+          "alt": "Winnin"
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",
