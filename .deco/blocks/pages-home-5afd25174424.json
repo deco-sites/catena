@@ -157,6 +157,43 @@
       "font": "<p>Fonte: Global Talent Trends 2023</p>"
     },
     {
+      "__resolveType": "site/sections/Operation.tsx",
+      "title": "Como funciona o processo com a Catena?",
+      "content": "<p>Um processo de recrutamento assertivo é fundamental para recrutar bem. Aqui na Catena, fazemos todo o todo o trabalho de atração, promoção e seleção de candidatos e você recebe candidatos prontos para entrevista!</p>",
+      "cardsInline": [
+        {
+          "title": "Perfis completos em até 72h",
+          "content": "<p>Em até 72 horas, te entregamos candidatos com a formação, perfil e disponibilidade que você busca</p>"
+        },
+        {
+          "title": "Por menos de 1 salário",
+          "content": "<p>Usando tecnologia, reduzimos drasticamente o custo de recrutamento e a economia vai pra você</p>"
+        },
+        {
+          "title": "Com suporte e garantia estendida",
+          "content": "<p>Ajuda? Oferecemos suporte ao longo do processo e garantia estendida em todas as vagas</p>"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Entendimento",
+          "content": "<p>A partir do descritivo de vaga, desenhamos o perfil que você busca, criamos conteúdos e estratégias para engajar seu público-alvo.</p>"
+        },
+        {
+          "title": "Promoção",
+          "content": "<p>Criamos campanhas e promovemos a vaga nos canais certos, usando tráfego orgânico e pago para colocar sua empresa e vaga na frente dos candidatos.</p>"
+        },
+        {
+          "title": "Seleção",
+          "content": "<p>Monitoramos conversões, cliques, candidaturas, pré-selecionamos e avaliamos os candidatos para chegar a uma lista de perfis qualificados.</p>"
+        },
+        {
+          "title": "Entrevistas",
+          "content": "<p>Você começa aqui! Com os perfis na mão, você já começa seu processo de seleção contactando candidatos qualificados para agendar entrevistas!</p>"
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",
