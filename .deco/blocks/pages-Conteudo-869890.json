@@ -14,7 +14,12 @@
       "posts": {
         "__resolveType": "site/loaders/Blog/BlogPostCategory.tsx",
         "count": 6
-      }
+      },
+      "categories": [
+        "Customization",
+        "teste"
+      ],
+      "descriptionPage": "<p>A gente sabe que cada vaga é diferente. Nesta página você encontra algumas das vagas com as quais já ajudamos nossos clientes.<br>Os cases aqui te darão uma ideia de como a Catena pode ajudar a sua empresa a recrutar melhor.&nbsp;</p>"
     },
     {
       "__resolveType": "Footer"

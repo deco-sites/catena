@@ -1,3 +1,4 @@
 {
-  "__resolveType": "blog/loaders/BlogPostItem.ts"
+  "__resolveType": "blog/loaders/BlogPostItem.ts",
+  "slug": "/customization"
 }

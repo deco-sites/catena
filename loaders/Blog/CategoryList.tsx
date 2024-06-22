@@ -5,7 +5,7 @@ import { Category } from "apps/blog/types.ts";
 const COLLECTION_PATH = "collections/blog/categories";
 const ACCESSOR = "category";
 
-export default async function BlogPostCategory(
+export default async function CategoryList(
     _req: Request,
     ctx: AppContext,
 ): Promise<Category[] | null> {

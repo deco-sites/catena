@@ -1,4 +1,4 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 import { ComponentChildren, Fragment } from "preact";
@@ -33,6 +33,8 @@ export interface Props {
     /** @title items per page */
     perPage?: number;
   };
+  descriptionPage: HTMLWidget;
+  categories?: string[]
 }
 
 const DEFAULT_IMAGE =
@@ -197,6 +199,8 @@ export default function BlogPosts({
     page = 0,
     perPage = 6,
   } = {},
+  categories,
+  descriptionPage,
 }: Props) {
   const from = perPage * page;
   const to = perPage * (page + 1);
@@ -235,9 +239,10 @@ export default function BlogPosts({
   const arrayPage = Array.from({ length: numberPage }, (_, i) => i + 1)
 
   return (
-    <div class="w-full h-full text-primary-content bg-neutral" id={postList}>
-      <div class="flex flex-col lg:flex-row w-full mx-auto max-w-[1320px]">
-        <div class="gap-8 flex flex-col px-4 md:grid-cols-2 py-32 font-thicccboi  bg-neutral w-full" >
+    <div class="w-full h-full text-primary-content bg-neutral py-32 font-thicccboi flex flex-col gap-4" id={postList}>
+      <span class="w-full text-base lg:text-lg text-primary-content mx-auto max-w-[1320px] px-4" dangerouslySetInnerHTML={{ __html: descriptionPage }}></span>
+      <div class="flex flex-col lg:flex-row w-full mx-auto max-w-[1320px] px-4 gap-3">
+        <div class="gap-8 flex flex-col md:grid-cols-2 bg-neutral w-full" >
           {posts.slice(from, to).map((post, index) => (
             <a
               href={`/blog/${post.slug}`}
@@ -355,10 +360,24 @@ export default function BlogPosts({
             )
           }
         </div >
-        <div class="w-full lg:w-80 px-2 h-screen bg-secondary">
+        <div class="w-full lg:w-80 px-2 h-screen font-thicccboi flex flex-col gap-3">
+          <h3 class="text-primary-content text-2xl font-bold">Busque Casses</h3>
+          <form class="flex flex-row rounded-lg w-full " >
+            <input class="px-3 py-2 bg-base-100 placeholder:text-primary-content" placeholder={"Busque pelo Termo"}>
+            </input>
+            <button class="bg-secondary p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+              </svg>
+            </button>
+          </form>
+          <ul class="flex flex-col w-full gap-2 py-4">
+            {categories?.map((ctg) => <li class="text-base-200 cursor-pointer hover:text-secondary text-base">{ctg}</li>)}
+          </ul>
 
         </div>
-
       </div>
     </div>
 
