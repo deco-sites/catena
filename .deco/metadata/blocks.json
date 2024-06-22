@@ -165,5 +165,9 @@
   "/.deco/blocks/Preview%20blog%2Floaders%2FBlogPostItem.ts.json": {
     "blockType": "loaders",
     "__resolveType": "blog/loaders/BlogPostItem.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2FBlog%2FBlogPostCategory.tsx.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/Blog/BlogPostCategory.tsx"
   }
 }

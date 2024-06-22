@@ -12,7 +12,7 @@
         "perPage": 2
       },
       "posts": {
-        "__resolveType": "blog/loaders/BlogpostList.ts",
+        "__resolveType": "site/loaders/Blog/BlogPostCategory.tsx",
         "count": 6
       }
     },
