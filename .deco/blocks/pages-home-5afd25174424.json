@@ -135,6 +135,28 @@
       ]
     },
     {
+      "__resolveType": "site/sections/Data.tsx",
+      "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8cf81d5c-0ea3-49f8-9251-8ef2b2d34089",
+      "alt": "data",
+      "title": "9 em 10 profissionais estão abertos a novas oportunidades",
+      "content": "<p>O mercado de profissionais está em fluxo constante. Apenas 1 em cada 10 profissionais permanecerá em sua equipe este ano.</p>",
+      "progrees": [
+        {
+          "title": "Ativamente buscando oportunidades",
+          "porcentage": 57
+        },
+        {
+          "title": "Consideram novas oportunidades",
+          "porcentage": 33
+        },
+        {
+          "title": "Não consideram novas oportunidades",
+          "porcentage": 10
+        }
+      ],
+      "font": "<p>Fonte: Global Talent Trends 2023</p>"
+    },
+    {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",
