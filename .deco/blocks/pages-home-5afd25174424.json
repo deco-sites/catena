@@ -262,6 +262,29 @@
       "CTA": "FAZER SIMULAÇÃO"
     },
     {
+      "__resolveType": "site/sections/Faq.tsx",
+      "title": "Ainda tem alguma dúvida?",
+      "description": "Veja nossa sessão de perguntas frequentes.",
+      "questions": [
+        {
+          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+          "title": "O que a Catena faz?"
+        },
+        {
+          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+          "title": "O que a Catena faz?"
+        },
+        {
+          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+          "title": "O que a Catena faz?"
+        },
+        {
+          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+          "title": "O que a Catena faz?"
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",
