@@ -1,4 +1,40 @@
 {
   "__resolveType": "site/sections/Header.tsx",
-  "navigation": { "links": [], "buttons": [] }
+  "navigation": {
+    "links": [
+      {
+        "label": "Diferenciais",
+        "url": "#diferenciais"
+      },
+      {
+        "label": "Como Funciona",
+        "url": "#como-funciona"
+      },
+      {
+        "label": "Depoimentos",
+        "url": "#depoimentos"
+      },
+      {
+        "label": "Cases",
+        "url": "/Cases"
+      }
+    ],
+    "buttons": [],
+    "button": {
+      "label": "Quero me Cadastrar ",
+      "href": "#cadastro"
+    },
+    "languages": [
+      {
+        "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/79cdcebd-d787-40b5-bfdc-f21cf26307e9",
+        "label": "EUA",
+        "value": "en"
+      }
+    ]
+  },
+  "logo": {
+    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/6d36b9c0-0491-4138-87ee-47799519057c",
+    "alt": "Catena",
+    "srcDark": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8cb5d0c3-a313-4a80-b888-cd373c800138"
+  }
 }

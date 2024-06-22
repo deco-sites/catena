@@ -143,5 +143,27 @@
   "/.deco/blocks/Preview%20site%2Fsections%2FHero.tsx.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Hero.tsx"
+  },
+  "/.deco/blocks/pages-Conteudo-869890.json": {
+    "name": "Conteudo",
+    "path": "/conteudo",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20blog%2Floaders%2FCategory.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/Category.ts"
+  },
+  "/.deco/blocks/Preview%20blog%2Floaders%2FBlogpostList.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/BlogpostList.ts"
+  },
+  "/.deco/blocks/Preview%20blog%2Floaders%2FBlogPostPage.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/BlogPostPage.ts"
+  },
+  "/.deco/blocks/Preview%20blog%2Floaders%2FBlogPostItem.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/BlogPostItem.ts"
   }
 }
