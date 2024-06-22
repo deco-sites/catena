@@ -194,6 +194,60 @@
       ]
     },
     {
+      "__resolveType": "site/sections/Testimonials.tsx",
+      "title": "Depoimentos",
+      "slides": [
+        {
+          "content": {
+            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+            "position": "Sócio, JL Capacitores",
+            "name": "Giulio Destro",
+            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+            "alt": "Sócio, JL Capacitores"
+          }
+        },
+        {
+          "content": {
+            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+            "position": "Sócio, JL Capacitores",
+            "name": "Giulio Destro",
+            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+            "alt": "Sócio, JL Capacitores"
+          }
+        },
+        {
+          "content": {
+            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+            "position": "Sócio, JL Capacitores",
+            "name": "Giulio Destro",
+            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+            "alt": "Sócio, JL Capacitores"
+          }
+        },
+        {
+          "content": {
+            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+            "position": "Sócio, JL Capacitores",
+            "name": "Giulio Destro",
+            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+            "alt": "Sócio, JL Capacitores"
+          }
+        },
+        {
+          "content": {
+            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+            "position": "Sócio, JL Capacitores",
+            "name": "Giulio Destro",
+            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+            "alt": "Sócio, JL Capacitores"
+          }
+        }
+      ],
+      "dots": true,
+      "interval": 5,
+      "subTitle": "Veja o que nossos clientes falam da gente!"
+    },
+    {
       "__resolveType": "site/sections/MainPost.tsx",
       "post": {
         "__resolveType": "blog/loaders/BlogPostItem.ts",

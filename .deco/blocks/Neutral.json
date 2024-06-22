@@ -19,7 +19,7 @@
     "primary": "#21262c",
     "secondary": "#ffcc00",
     "tertiary": "#404040",
-    "neutral": "#333333",
+    "neutral": "#f6f7f9",
     "success": "#008060",
     "warning": "#ffc453",
     "error": "#d82c0d",
@@ -36,6 +36,8 @@
   },
   "mode": "light",
   "complementaryColors": {
-    "base-200": "#aab0bc"
+    "base-200": "#aab0bc",
+    "base-content": "#60697b",
+    "primary-content": "#000000"
   }
 }

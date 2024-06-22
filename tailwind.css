@@ -66,3 +66,14 @@
   height: 0.3em;
   transform: translateX(-50%);
 }
+
+.blockquote::before {
+  content: "\201d";
+  position: absolute;
+  top: -1.5rem;
+  left: -0.9rem;
+  color: rgba(52, 63, 82, 0.05);
+  font-size: 10rem;
+  line-height: 1;
+  z-index: 1;
+}

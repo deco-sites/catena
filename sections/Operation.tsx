@@ -47,7 +47,7 @@ export default function Operation(props: Props) {
     const { title, content, cardsInline, cards } = props
 
     return (
-        <div class="w-full bg-primary flex flex-col gap-7 md:gap-12 h-full py-8 mt-8 mb-24 after:border-l-[100vw] after:border-l-primary relative after:border-b-[4rem] after:-bottom-[3.995rem] after:border-transparent after:absolute after:bg-transparent after:-z-10 after:left-0 after:right-0">
+        <div class="w-full bg-primary flex flex-col gap-7 md:gap-12 h-full py-8 mt-8 mb- after:border-l-[100vw] after:border-l-primary relative after:border-b-[4rem] after:-bottom-[3.995rem] after:border-transparent after:absolute after:bg-neutral after:-z-10 after:left-0 after:right-0">
             <div class=" max-w-[1320px] container md:px-14 lg:px-3 flex flex-col lg:flex-row px-3 pt-6 lg:pt-14 lg:pb-8 lg:gap-0 font-thicccboi text-base-100 gap-7 md:gap-12">
                 <div class="w-full order-2 lg:order-1 lg:justify-center flex flex-col lg:w-2/4 ">
                     <h3 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7">

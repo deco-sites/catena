@@ -20,6 +20,7 @@ export interface Testimonial {
 
 export interface Props {
   title?: string;
+  subTitle?: string;
   slides?: Testimonial[];
   /**
    * @title Show arrows
@@ -40,6 +41,7 @@ export interface Props {
 
 const DEFAULT_PROPS = {
   title: "This is where you'll put your customer testimonials",
+  subTitle: "Lorem ipsom",
   slides: [
     {
       content: {
@@ -109,25 +111,25 @@ function SliderItem(
   return (
     <div
       id={id}
-      class="relative overflow-y-hidden w-full min-h-[292px]"
+      class="relative overflow-y-hidden w-full min-h-[292px] bg-base-100"
     >
-      <div class="flex flex-col justify-center gap-16 p-8 border border-base-content rounded-2xl h-full max-w-[600px]">
-        <p class="text-lg">{content?.description}</p>
+      <div class="flex flex-col justify-center gap-5 p-8 border border-base-200 text-base-content rounded-2xl h-full max-w-[600px]">
+        <p class=" relative blockquote before:font-unicons before:content-['\201d'] text-[15px] leading-[28px]">{content?.description}</p>
         <div class="flex items-center gap-5">
           <Image
-            class="object-cover w-14 h-14 rounded-full"
+            class="object-cover w-[70px] h-[70px] rounded-full"
             alt={content?.alt}
             src={content?.avatar || ""}
-            width={56}
-            height={56}
+            width={70}
+            height={70}
           />
           <div class="flex flex-col">
-            <p class="font-semibold text-base">{content?.name}</p>
-            <p class="text-base">{content?.position}</p>
+            <p class="font-bold text-[19px] text-primary-content">{content?.name}</p>
+            <p class="text-[17px]">{content?.position}</p>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
@@ -151,7 +153,7 @@ function Dots({ slides, interval = 0 }: Props) {
             <Slider.Dot index={index}>
               <div class="py-5">
                 <div
-                  class="w-2 h-2 rounded-full group-disabled:animate-progress dot"
+                  class="w-2 h-2 rounded-full group-disabled:bg-white group-disabled:border-2 group-disabled:border-base-200 bg-base-200"
                   style={{ animationDuration: `${interval}s` }}
                 />
               </div>
@@ -192,40 +194,45 @@ function Buttons() {
 
 function Carousel(props: Props) {
   const id = useId();
-  const { title, slides, interval } = { ...DEFAULT_PROPS, ...props };
+  const { title, slides, interval, subTitle } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <div
-      id={id}
-      class="min-h-min flex flex-col container lg:mx-auto mx-4 py-12 lg:py-28"
-    >
-      <h2 class="text-4xl leading-snug lg:w-1/2 pb-12 lg:pb-16">
-        {title}
-      </h2>
-      <Slider
-        class="carousel carousel-center w-full col-span-full row-span-full gap-6"
-        rootId={id}
-        interval={interval && interval * 1e3}
-        infinite
-      >
-        {slides?.map((slide, index) => (
-          <Slider.Item
-            index={index}
-            class="carousel-item max-w-[600px] w-full"
-          >
-            <SliderItem
-              slide={slide}
-              id={`${id}::${index}`}
-            />
-          </Slider.Item>
-        ))}
-      </Slider>
+    <div class="w-full h-full bg-neutral">
 
-      <div class="flex justify-between pt-8 lg:px-16">
-        {props.dots && <Dots slides={slides} interval={interval} />}{" "}
-        {props.arrows && <Buttons />}
+      <div
+        id={id}
+        class="min-h-min flex flex-col w-full container lg:mx-auto lg:max-w-[1320px] px-4 md:px-14 lg:px-4 py-12 lg:py-28 justify-center items-center font-thicccboi"
+      >
+        <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content ">
+          {title}
+        </h2>
+        <p class="mb-8 text-[19px] text-center text-base-content">{subTitle}</p>
+        <Slider
+          class="carousel carousel-center w-full col-span-full row-span-full gap-6"
+          rootId={id}
+          interval={interval && interval * 1e3}
+          infinite
+        >
+          {slides?.map((slide, index) => (
+            <Slider.Item
+              index={index}
+              class="snap-center flex-none max-w-[600px] w-full md:w-[calc(50%-0.8rem)] md:snap-start lg:md:w-[calc(33.333%-1rem)]"
+            >
+              <SliderItem
+                slide={slide}
+                id={`${id}::${index}`}
+              />
+            </Slider.Item>
+          ))}
+        </Slider>
+
+        <div class="flex justify-between pt-8 lg:px-16">
+          {props.dots && <Dots slides={slides} interval={interval} />}{" "}
+          {props.arrows && <Buttons />}
+        </div>
       </div>
     </div>
+
   );
 }
 
