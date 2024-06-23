@@ -298,7 +298,9 @@
           }
         ],
         "rule": {
-          "__resolveType": "website/matchers/host.ts"
+          "__resolveType": "website/matchers/cookie.ts",
+          "name": "language",
+          "value": "en"
         }
       },
       {

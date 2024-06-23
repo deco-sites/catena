@@ -4,6 +4,7 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $Animation_Fade from "./islands/Animation/Fade.tsx";
+import * as $Button_LanguageButton from "./islands/Button/LanguageButton.tsx";
 import * as $header_AnimationHeader from "./islands/header/AnimationHeader.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -13,6 +14,7 @@ const manifest = {
   },
   islands: {
     "./islands/Animation/Fade.tsx": $Animation_Fade,
+    "./islands/Button/LanguageButton.tsx": $Button_LanguageButton,
     "./islands/header/AnimationHeader.tsx": $header_AnimationHeader,
   },
   baseUrl: import.meta.url,

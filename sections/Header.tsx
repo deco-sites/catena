@@ -3,9 +3,8 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import ButtonArrowAnimation, {
   Props as Button,
 } from "site/components/ui/Buttton/ButtonArrowAnimation.tsx";
-import ButtonLanguage, {
-  Language,
-} from "site/components/ui/Buttton/ButtonLanguage.tsx";
+import { Language } from "site/components/ui/Buttton/ButtonLanguage.tsx";
+import ButtonLanguage,  from "../islands/Button/LanguageButton.tsx";
 import AnimationScroll from "../islands/header/AnimationHeader.tsx";
 
 type Type = "dark" | "light";
