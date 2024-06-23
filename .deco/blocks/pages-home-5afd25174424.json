@@ -41,7 +41,8 @@
           "title": "Contrate sem Medo",
           "content": "<p>A gente sabe que recrutar é sempre difícil, por isso toda vaga na Catena inclui garantia estendida.</p>"
         }
-      ]
+      ],
+      "id": "diferenciais"
     },
     {
       "__resolveType": "site/sections/Companies.tsx",
@@ -95,7 +96,8 @@
           "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/c917402b-6098-4662-bd37-a8140a0130ed",
           "alt": "Winnin"
         }
-      ]
+      ],
+      "id": "companies"
     },
     {
       "__resolveType": "site/sections/Data.tsx",
@@ -154,7 +156,8 @@
           "title": "Entrevistas",
           "content": "<p>Você começa aqui! Com os perfis na mão, você já começa seu processo de seleção contactando candidatos qualificados para agendar entrevistas!</p>"
         }
-      ]
+      ],
+      "id": "como-funciona"
     },
     {
       "__resolveType": "site/sections/Testimonials.tsx",
@@ -208,7 +211,8 @@
       ],
       "dots": true,
       "interval": 5,
-      "subTitle": "Veja o que nossos clientes falam da gente!"
+      "subTitle": "Veja o que nossos clientes falam da gente!",
+      "idS": "depoimentos"
     },
     {
       "__resolveType": "site/sections/Form.tsx",
@@ -222,7 +226,8 @@
         "wage": "Qual o salário mensal aproximado?",
         "email": "Seu melhor e-mail"
       },
-      "CTA": "FAZER SIMULAÇÃO"
+      "CTA": "FAZER SIMULAÇÃO",
+      "id": "cadastro"
     },
     {
       "__resolveType": "site/sections/Faq.tsx",

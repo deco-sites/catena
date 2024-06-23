@@ -89,3 +89,7 @@
   height: 0.05rem;
   background: #ffffff;
 }
+
+* {
+  scroll-behavior: smooth;
+}

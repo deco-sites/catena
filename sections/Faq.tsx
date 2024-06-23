@@ -16,6 +16,8 @@ export interface Props {
   description?: string;
   cta?: CTA;
   questions?: Question[];
+  id?: string;
+
 }
 
 const _DEFAULT_IMAGE =
@@ -53,12 +55,13 @@ export default function BlogPosts({
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
     },
   ],
+  id,
 }: Props) {
 
   const media = Math.round(questions.length / 2)
 
   return (
-    <div class="w-full h-full bg-neutral py-14">
+    <div class="w-full h-full bg-neutral py-14" id={id}>
       <div class="flex flex-col gap-10 lg:gap-20 justify-center items-center mx-auto max-w-[1320px] px-4 md:px-14 lg:px-4 font-thicccboi">
         <div class="flex-none space-y-6 lg:w-2/5">
           <p class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content text-center ">

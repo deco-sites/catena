@@ -10,14 +10,16 @@ export interface Props {
         email: string;
     }
     CTA: string;
+    id?: string;
+
 }
 
 export default function Form(props: Props) {
 
-    const { title, titleForm, formPlaceholder, subTitleForm, CTA } = props
+    const { title, titleForm, formPlaceholder, subTitleForm, CTA, id } = props
 
     return (
-        <div class="bg-primary text-base-100 flex flex-col gap-4 w-full h-full font-thicccboi">
+        <div class="bg-primary text-base-100 flex flex-col gap-4 w-full h-full font-thicccboi" id={id}>
             <div class="flex flex-col gap-4 w-full h-full max-w-[1320px] px-4 py-14 md:px-14 lg:px-4 mx-auto">
                 <span class="relative line uppercase font-bold pl-8 max-w-[350px]">{title}</span>
                 <div class="bg-secondary rounded-xl py-5 px-4 flex flex-col gap-3 lg:flex-row lg:px-9 lg:py-10">

@@ -4,25 +4,25 @@
     "links": [
       {
         "label": "Diferenciais",
-        "url": "#diferenciais"
+        "url": "/#diferenciais"
       },
       {
         "label": "Como Funciona",
-        "url": "#como-funciona"
+        "url": "/#como-funciona"
       },
       {
         "label": "Depoimentos",
-        "url": "#depoimentos"
+        "url": "/#depoimentos"
       },
       {
         "label": "Cases",
-        "url": "/Cases"
+        "url": "/conteudo"
       }
     ],
     "buttons": [],
     "button": {
       "label": "Quero me Cadastrar ",
-      "href": "#cadastro"
+      "href": "/#cadastro"
     },
     "languages": [
       {

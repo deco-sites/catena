@@ -37,6 +37,8 @@ export interface Props {
    * @description time (in seconds) to start the carousel autoplay
    */
   interval?: number;
+  idS?: string;
+
 }
 
 const DEFAULT_PROPS = {
@@ -194,10 +196,10 @@ function Buttons() {
 
 function Carousel(props: Props) {
   const id = useId();
-  const { title, slides, interval, subTitle } = { ...DEFAULT_PROPS, ...props };
+  const { title, slides, interval, subTitle, idS } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <div class="w-full h-full bg-neutral">
+    <section class="w-full h-full bg-neutral" id={idS}>
 
       <div
         id={id}
@@ -231,7 +233,7 @@ function Carousel(props: Props) {
           {props.arrows && <Buttons />}
         </div>
       </div>
-    </div>
+    </section>
 
   );
 }

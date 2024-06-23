@@ -8,13 +8,15 @@ interface Icon {
 
 export interface Props {
     title: string;
-    icons: Icon[]
+    icons: Icon[];
+    id?: string;
+
 }
 
 export default function Companies(props: Props) {
-    const { title, icons } = props
+    const { title, icons, id } = props
     return (
-        <div class="flex w-full h-full py-8">
+        <div class="flex w-full h-full py-8" id={id}>
             <div class="w-full max-w-[1320px] mx-auto px-4 text-center">
                 <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7">
                     {title}

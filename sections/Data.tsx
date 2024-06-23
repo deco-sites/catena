@@ -13,14 +13,16 @@ export interface Props {
     content: HTMLWidget;
     progrees: ProgressBar[];
     font: HTMLWidget;
+    id?: string;
+
 }
 
 export default function Data(props: Props) {
 
-    const { img, alt, title, content, font, progrees } = props
+    const { img, alt, title, content, font, progrees, id } = props
 
     return (
-        <div class="w-full h-full py-9">
+        <div class="w-full h-full py-9" id={id}>
             <div class="flex max-w-[1320px] flex-col lg:flex-row mx-auto px-4 w-full h-full container md:px-14 lg:px-4 font-thicccboi">
                 <div class="w-full lg:w-2/4 flex justify-center items-center md:justify-start">
                     <Image src={img} alt={alt} width={300} height={300} class="w-full max-w-[450px] lg:max-w-full" />
