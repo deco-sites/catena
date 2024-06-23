@@ -7,7 +7,6 @@ const COLLECTION_PATH = "collections/blog/posts";
 const ACCESSOR = "post";
 
 export interface Props {
-    slug: RequestURLParam;
     count: number;
     page?: number;
 }
@@ -22,7 +21,7 @@ export interface Props {
  * @returns A promise that resolves to the blog post or undefined if not found.
  */
 export default async function BlogPostSearch(
-    { slug, count, page }: Props,
+    { count, page }: Props,
     req: Request,
     ctx: AppContext,
 ): Promise<BlogPost[] | null> {
@@ -35,15 +34,22 @@ export default async function BlogPostSearch(
     const { url: baseUrl } = req;
     const url = new URL(baseUrl);
 
+    console.log("search", url.searchParams.get("search"))
+
+    const search = url.searchParams.get("search")?.toLocaleLowerCase()
+
+    if (!search) {
+        return null
+    }
+
     const arrayPosts: BlogPost[] = [];
+
     posts.map((post) => {
-        post.categories.map((ctg) => {
-            if (ctg.slug == slug) {
-                if (arrayPosts.findIndex((postBlog) => postBlog == post)) {
-                    arrayPosts.push(post)
-                }
+        if (post.title.toLocaleLowerCase().includes(search)) {
+            if (arrayPosts.findIndex((postBlog) => postBlog == post)) {
+                arrayPosts.push(post)
             }
-        })
+        }
     })
 
     const mostRecentPosts = arrayPosts.toSorted((a, b) => {

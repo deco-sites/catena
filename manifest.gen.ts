@@ -6,7 +6,8 @@ import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$0 from "./loaders/Blog/BlogPostCategory.tsx";
 import * as $$$1 from "./loaders/Blog/BlogPostCategoryPath.tsx";
-import * as $$$2 from "./loaders/Blog/CategoryList.tsx";
+import * as $$$2 from "./loaders/Blog/BlogPostCategorySearch.tsx";
+import * as $$$3 from "./loaders/Blog/CategoryList.tsx";
 import * as $$$$$$0 from "./sections/BlogPost.tsx";
 import * as $$$$$$1 from "./sections/BlogPosts.tsx";
 import * as $$$$$$2 from "./sections/Companies.tsx";
@@ -28,7 +29,8 @@ const manifest = {
   "loaders": {
     "site/loaders/Blog/BlogPostCategory.tsx": $$$0,
     "site/loaders/Blog/BlogPostCategoryPath.tsx": $$$1,
-    "site/loaders/Blog/CategoryList.tsx": $$$2,
+    "site/loaders/Blog/BlogPostCategorySearch.tsx": $$$2,
+    "site/loaders/Blog/CategoryList.tsx": $$$3,
   },
   "sections": {
     "site/sections/BlogPost.tsx": $$$$$$0,

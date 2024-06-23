@@ -243,20 +243,23 @@ export default function BlogPosts({
   const numberPage = posts && posts?.length / perPage || 0;
   const arrayPage = Array.from({ length: numberPage }, (_, i) => i + 1)
 
+  const ACTION = "/conteudo/s";
+  const NAME = "search";
+
   return (
     <div class="w-full h-full text-primary-content bg-neutral pt-32 pb-20 font-thicccboi flex flex-col gap-4" id={postList}>
       <span class="w-full text-base lg:text-lg text-primary-content mx-auto max-w-[1320px] px-4" dangerouslySetInnerHTML={{ __html: descriptionPage }}></span>
       <div class="flex flex-col lg:flex-row w-full mx-auto max-w-[1320px] px-4 gap-3">
         <div class="gap-8 flex flex-col md:grid-cols-2 bg-neutral w-full" >
-          {posts.slice(from, to).map((post, index) => (
-            <a
+          {posts?.slice(from, to).map((post, index) => (
+            <a  
               href={`/conteudo/post/${post.slug}`}
               class={`"overflow-hidden border border-base-200 rounded-lg bg-base-100 flex flex-col md:gap-6 ${index % 2 ? "md:flex-row" : "md:flex-row-reverse"}`}
             >
               <Image
                 width={330}
                 height={186}
-                class="object-fit w-full md:w-2/4"
+                class="object-cover w-full md:w-2/4"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={post.image || ""}
                 alt={post.image}
@@ -366,11 +369,11 @@ export default function BlogPosts({
           }
         </div >
         <div class="w-full lg:w-80 px-2 h-auto font-thicccboi flex flex-col gap-3">
-          <h3 class="text-primary-content text-2xl font-bold">Busque Casses</h3>
-          <form class="flex flex-row rounded-lg w-full " >
-            <input class="px-3 py-2 bg-base-100 placeholder:text-primary-content" placeholder={"Busque pelo Termo"}>
+          <h3 class="text-primary-content text-2xl font-bold">Busque Cases</h3>
+          <form id={"SEARCHBAR_INPUT_FORM_ID"} action={ACTION} class="flex flex-row rounded-lg w-full " >
+            <input class="px-3 py-2 bg-base-100 placeholder:text-primary-content" name={NAME} placeholder={"Busque pelo Termo"}>
             </input>
-            <button class="bg-secondary p-2">
+            <button for={"SEARCHBAR_INPUT_FORM_ID"} type="submit" class="bg-secondary p-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />

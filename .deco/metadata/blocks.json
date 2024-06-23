@@ -196,5 +196,15 @@
     "path": "/conteudo/post/:slug",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2FBlog%2FBlogPostCategorySearch.tsx.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/Blog/BlogPostCategorySearch.tsx"
+  },
+  "/.deco/blocks/pages-Search-467490.json": {
+    "name": "Search",
+    "path": "/conteudo/s",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }

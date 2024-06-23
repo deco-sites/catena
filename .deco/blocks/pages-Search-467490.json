@@ -1,0 +1,56 @@
+{
+  "name": "Search",
+  "path": "/conteudo/s",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/BlogPosts.tsx",
+      "pagination": {
+        "page": 0,
+        "perPage": 2
+      },
+      "posts": {
+        "__resolveType": "site/loaders/Blog/BlogPostCategorySearch.tsx",
+        "count": 6
+      },
+      "categories": [
+        {
+          "0": "C",
+          "1": "u",
+          "2": "s",
+          "3": "t",
+          "4": "o",
+          "5": "m",
+          "6": "i",
+          "7": "z",
+          "8": "a",
+          "9": "t",
+          "10": "i",
+          "11": "o",
+          "12": "n",
+          "label": "teste",
+          "href": "teste"
+        },
+        {
+          "0": "t",
+          "1": "e",
+          "2": "s",
+          "3": "t",
+          "4": "e",
+          "label": "teste",
+          "href": "teste"
+        }
+      ],
+      "descriptionPage": "<p>A gente sabe que cada vaga é diferente. Nesta página você encontra algumas das vagas com as quais já ajudamos nossos clientes.<br>Os cases aqui te darão uma ideia de como a Catena pode ajudar a sua empresa a recrutar melhor.&nbsp;</p>"
+    },
+    {
+      "__resolveType": "Footer"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
