@@ -25,7 +25,7 @@ export default function Data(props: Props) {
         <div class="w-full h-full py-9" id={id}>
             <div class="flex max-w-[1320px] flex-col lg:flex-row mx-auto px-4 w-full h-full container md:px-14 lg:px-4 font-thicccboi">
                 <div class="w-full lg:w-2/4 flex justify-center items-center md:justify-start">
-                    <Image src={img} alt={alt} width={300} height={300} class="w-full max-w-[450px] lg:max-w-full" />
+                    <Image src={img} alt={alt} width={300} height={300} class="w-full h-auto max-w-[450px] lg:max-w-full object-cover" />
                 </div>
                 <div class="w-full lg:w-2/4 flex flex-col gap-3 lg:pl-24 lg:py-20">
                     <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content">

@@ -266,7 +266,7 @@ export default function BlogPosts({
                 decoding="async"
                 loading="lazy"
               />
-              <div class={`p-3 md:p-5 space-y-4 md:w-2/4 relative md:before:content-[''] md:before:w-16 md:before:h-16 md:before:bg-base-100 md:before:absolute md:before:top-7  ${index % 2 ? "md:before:-left-14" : "md:before:-right-14"} md:before:rotate-45 md:before:z-[-1] z-10`}>
+              <div style={{overflowX: "initial"}} class={`p-3 md:p-5 space-y-4 md:w-2/4 relative  md:before:content-[''] md:before:w-16 md:before:h-16 md:before:bg-base-100 md:before:absolute md:before:top-7  ${index % 2 ? "md:before:-left-14" : "md:before:-right-14"} md:before:rotate-45 md:before:z-[-1] z-10`}>
                 <div class="font-semibold text-secondary">
                   {calculateReadingTime(post.content.split(" ").length)}
                 </div>
