@@ -1,6 +1,6 @@
 {
   "name": "Blog Post Page",
-  "path": "/blog/:slug",
+  "path": "/conteudo/post/:slug",
   "sections": [
     {
       "__resolveType": "Header"

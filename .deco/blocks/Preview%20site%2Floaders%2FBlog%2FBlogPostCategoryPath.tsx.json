@@ -1,0 +1,8 @@
+{
+  "__resolveType": "site/loaders/Blog/BlogPostCategoryPath.tsx",
+  "count": 6,
+  "slug": {
+    "__resolveType": "website/functions/requestToParam.ts",
+    "param": "/:slug"
+  }
+}

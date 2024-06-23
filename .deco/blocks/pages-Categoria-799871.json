@@ -1,6 +1,6 @@
 {
-  "name": "Conteudo",
-  "path": "/conteudo",
+  "name": "Categoria",
+  "path": "/conteudo/:slug",
   "sections": [
     {
       "__resolveType": "Header"
@@ -12,8 +12,12 @@
         "perPage": 2
       },
       "posts": {
-        "__resolveType": "site/loaders/Blog/BlogPostCategory.tsx",
-        "count": 6
+        "__resolveType": "site/loaders/Blog/BlogPostCategoryPath.tsx",
+        "count": 6,
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "slug"
+        }
       },
       "categories": [
         {
@@ -30,25 +34,17 @@
           "10": "i",
           "11": "o",
           "12": "n",
-          "label": "Cutomization",
-          "href": "/conteudo/customization"
+          "label": "teste",
+          "href": "teste"
         },
         {
-          "0": "C",
-          "1": "u",
+          "0": "t",
+          "1": "e",
           "2": "s",
           "3": "t",
-          "4": "o",
-          "5": "m",
-          "6": "i",
-          "7": "z",
-          "8": "a",
-          "9": "t",
-          "10": "i",
-          "11": "o",
-          "12": "n",
-          "label": "Performance",
-          "href": "/conteudo/performance"
+          "4": "e",
+          "label": "teste",
+          "href": "teste"
         }
       ],
       "descriptionPage": "<p>A gente sabe que cada vaga é diferente. Nesta página você encontra algumas das vagas com as quais já ajudamos nossos clientes.<br>Os cases aqui te darão uma ideia de como a Catena pode ajudar a sua empresa a recrutar melhor.&nbsp;</p>"

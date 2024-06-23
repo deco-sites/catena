@@ -250,7 +250,7 @@ export default function BlogPosts({
         <div class="gap-8 flex flex-col md:grid-cols-2 bg-neutral w-full" >
           {posts.slice(from, to).map((post, index) => (
             <a
-              href={`/blog/${post.slug}`}
+              href={`/conteudo/post/${post.slug}`}
               class={`"overflow-hidden border border-base-200 rounded-lg bg-base-100 flex flex-col md:gap-6 ${index % 2 ? "md:flex-row" : "md:flex-row-reverse"}`}
             >
               <Image

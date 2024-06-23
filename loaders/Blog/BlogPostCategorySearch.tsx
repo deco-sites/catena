@@ -13,7 +13,7 @@ export interface Props {
 }
 
 /**
- * @title BlogPostCategoryPath
+ * @title BlogPostSearch
  * @description Fetches a specific blog post page by its slug.
  *
  * @param props - Contains the slug of the blog post.
@@ -21,7 +21,7 @@ export interface Props {
  * @param ctx - The application context.
  * @returns A promise that resolves to the blog post or undefined if not found.
  */
-export default async function BlogPostCategoryLoader(
+export default async function BlogPostSearch(
     { slug, count, page }: Props,
     req: Request,
     ctx: AppContext,

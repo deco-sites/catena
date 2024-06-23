@@ -119,12 +119,6 @@
     "blockType": "apps",
     "__resolveType": "decohub/apps/htmx.ts"
   },
-  "/.deco/blocks/pages-Blog%2520Post%2520Page-827555.json": {
-    "name": "Blog Post Page",
-    "path": "/blog/:slug",
-    "blockType": "pages",
-    "__resolveType": "website/pages/Page.tsx"
-  },
   "/.deco/blocks/pages-home-5afd25174424.json": {
     "name": "Home",
     "path": "/",
@@ -182,5 +176,25 @@
   "/.deco/blocks/collections%2Fblog%2Fcategories%2F44739ffc610e.json": {
     "blockType": "loaders",
     "__resolveType": "blog/loaders/Category.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Floaders%2FBlog%2FBlogPostCategoryPath.tsx.json": {
+    "blockType": "loaders",
+    "__resolveType": "site/loaders/Blog/BlogPostCategoryPath.tsx"
+  },
+  "/.deco/blocks/Preview%20website%2Floaders%2Fpages.ts.json": {
+    "blockType": "loaders",
+    "__resolveType": "website/loaders/pages.ts"
+  },
+  "/.deco/blocks/pages-Categoria-799871.json": {
+    "name": "Categoria",
+    "path": "/conteudo/:slug",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/pages-Blog%2520Post%2520Page-827555.json": {
+    "name": "Blog Post Page",
+    "path": "/conteudo/post/:slug",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
