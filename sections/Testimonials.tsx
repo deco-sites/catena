@@ -205,7 +205,7 @@ function Carousel(props: Props) {
         id={id}
         class="min-h-min flex flex-col w-full container lg:mx-auto lg:max-w-[1320px] px-4 md:px-14 lg:px-4 py-12 lg:py-28 justify-center items-center font-thicccboi"
       >
-        <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content ">
+        <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content text-primary-content ">
           {title}
         </h2>
         <p class="mb-8 text-[19px] text-center text-base-content">{subTitle}</p>

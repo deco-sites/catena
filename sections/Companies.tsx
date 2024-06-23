@@ -18,7 +18,7 @@ export default function Companies(props: Props) {
     return (
         <div class="flex w-full h-full py-8" id={id}>
             <div class="w-full max-w-[1320px] mx-auto px-4 text-center">
-                <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7">
+                <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content">
                     {title}
                 </h2>
                 <ul class="flex flex-row flex-wrap gap-2 w-full">

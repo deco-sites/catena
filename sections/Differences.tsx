@@ -24,7 +24,7 @@ export default function Diffenrence(props: Props) {
                 <h2 dangerouslySetInnerHTML={{ __html: title }} class={"uppercase text-[15px] font-bold text-base-200"}>
 
                 </h2>
-                <h3 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7" dangerouslySetInnerHTML={{ __html: subTitle }}>
+                <h3 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content" dangerouslySetInnerHTML={{ __html: subTitle }}>
 
                 </h3>
                 <ul class="flex flex-col gap-4 md:flex-row justify-center items-center lg:gap-10">

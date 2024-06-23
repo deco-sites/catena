@@ -28,7 +28,7 @@ export default function Data(props: Props) {
                     <Image src={img} alt={alt} width={300} height={300} class="w-full max-w-[450px] lg:max-w-full" />
                 </div>
                 <div class="w-full lg:w-2/4 flex flex-col gap-3 lg:pl-24 lg:py-20">
-                    <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7">
+                    <h2 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content">
                         {title}
                     </h2>
                     <span class="text-base-200 text-[17px] lg:text-lg" dangerouslySetInnerHTML={{ __html: content }}>

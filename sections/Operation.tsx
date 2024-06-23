@@ -19,9 +19,9 @@ export interface Props {
 
 }
 
-function CardInline({ title, content }: CardInline) {
+function CardInline({ title, content, index }: { title: string, content: HTMLWidget, index: number }) {
     return (
-        <li class="flex flex-row gap-3 rounded-lg bg-base-100 p-3">
+        <li id={index % 2 ? " slide-right-" + index : " slide-left-" + index} class={`flex flex-row gap-3 rounded-lg bg-base-100 p-3  ${index % 2 ? " slideCustomRight" : " slideCustomLeft"}`}>
             <div class="rounded-full bg-secondary before:text-center before:content-['\e9dd'] before:top-[10%] before:text-3xl before:bottom-0 before:left-0 before:right-0 before:absolute relative before:font-unicons before:text-primary text-secondary w-11 h-11 min-w-11">
             </div>
             <div class="flex flex-col gap-2">
@@ -34,7 +34,10 @@ function CardInline({ title, content }: CardInline) {
 
 function Card({ title, content, index }: { title: string, content: HTMLWidget, index: number }) {
     return (
-        <div class={`flex flex-col gap-2 md:w-[calc(50%-0.75rem)] lg:w-[calc(33.3333%-7.9rem)] relative ${index < 3 && "lg:after:content-[''] lg:after:w-full lg:after:absolute lg:after:h-[1px] lg:after:top-8 lg:after:left-12 lg:after:border-t lg:after:border-t-[#a4aec633]"}`}>
+        <div id={"slide-left-" + index} class={`flex flex-col gap-2 md:w-[calc(50%-0.75rem)] lg:w-[calc(33.3333%-7.9rem)] slideCustomLeft slideInLeft relative
+          ${index < 3 && "lg:after:content-[''] lg:after:w-full lg:after:absolute lg:after:h-[1px] lg:after:top-8 lg:after:left-12 lg:after:border-t lg:after:border-t-[#a4aec633]"}`}
+            style={{ animationDelay: index + 1 + "s" }}
+        >
             <div class={`rounded-full w-16 h-16 flex justify-center items-center text-center mb-5 ${index < 3 ? "bg-secondary" : "bg-base-100"}`}>
                 <span class="text-center text-2xl font-bold">0{index + 1}</span>
             </div>
@@ -46,13 +49,59 @@ function Card({ title, content, index }: { title: string, content: HTMLWidget, i
 
 export default function Operation(props: Props) {
 
-    const { title, content, cardsInline, cards ,id } = props
+    const { title, content, cardsInline, cards, id } = props
 
     return (
-        <div id={id} class="w-full bg-primary flex flex-col gap-7 md:gap-12 h-full py-8 mt-8 mb- after:border-l-[100vw] after:border-l-primary relative after:border-b-[4rem] after:-bottom-[3.995rem] after:border-transparent after:absolute after:bg-neutral after:-z-10 after:left-0 after:right-0">
-            <div class=" max-w-[1320px] container md:px-14 lg:px-3 flex flex-col lg:flex-row px-3 pt-6 lg:pt-14 lg:pb-8 lg:gap-0 font-thicccboi text-base-100 gap-7 md:gap-12">
+        <div id={id} class="w-full bg-primary mb-16 flex flex-col gap-7 md:gap-12 h-full py-8 mt-8 mb- after:border-l-[100vw] after:border-l-primary relative after:border-b-[4rem] after:-bottom-[3.995rem] after:border-transparent after:absolute after:bg-neutral after:-z-10 after:left-0 after:right-0">
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                            @keyframes  slideInLeft{
+                            0% {
+                                opacity: 0;
+                                transform: translateX(-30px);
+                            }
+
+                            100% {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+            }
+                            @keyframes  slideInRight{
+                            0% {
+                                opacity: 0;
+                                transform: translateX(30px);
+                            }
+
+                            100% {
+                                opacity: 1;
+                                transform: translateX(0);
+                            }
+            }
+                            
+                            .slideCustomLeft {
+
+                                     view-timeline-name: --slide-left;
+    view-timeline-axis: block;
+    animation: linear slideInLeft both;
+    animation-timeline: --slide-left;
+    animation-range: entry 25% cover 50%;
+    animation-duration:300ms;
+                            }
+                                .slideCustomRight {
+
+                                     view-timeline-name: --slide-right;
+    view-timeline-axis: block;
+    animation: linear slideInRight both;
+    animation-timeline: --slide-right;
+    animation-range: entry 25% cover 50%;
+    animation-duration:300ms;
+                            }
+                            
+        `}} ></style>
+            <div class=" max-w-[1320px] container md:px-14 lg:px-3 flex flex-col lg:flex-row px-3 pt-6 lg:pt-14 lg:pb-8 lg:gap-0 font-thicccboi text-base-100 gap-7 md:gap-12" >
                 <div class="w-full order-2 lg:order-1 lg:justify-center flex flex-col lg:w-2/4 ">
-                    <h3 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7">
+                    <h3 class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-base-100">
                         {title}
                     </h3>
                     <span dangerouslySetInnerHTML={{ __html: content }}>
@@ -61,8 +110,8 @@ export default function Operation(props: Props) {
 
                 </div>
                 <ul class="flex flex-col gap-7 order-1 lg:order-2 lg:w-2/4 lg:py-12 lg:pl-9">
-                    {cardsInline.map((card) =>
-                        <CardInline content={card.content} title={card.title} />
+                    {cardsInline.map((card, index) =>
+                        <CardInline content={card.content} title={card.title} index={index} />
                     )}
 
                 </ul>

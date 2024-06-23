@@ -1,261 +1,568 @@
 {
   "name": "Home",
   "path": "/",
-  "sections": [
-    {
-      "__resolveType": "Header"
-    },
-    {
-      "__resolveType": "site/sections/Hero.tsx",
-      "title": "Candidatos qualificados para sua vaga ",
-      "description": "This text is entirely editable, tailor it freely.",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/cc407ff4-4f6d-479b-829f-c7803eea51b6",
-      "titleUnderline": "em até 72h",
-      "subTitle": "<p>Saia dos bancos de talentos genéricos e descubra recrutamento &amp; seleção feito para você!</p>",
-      "list": [
-        "Perfis completos em até 72 horas",
-        "Por menos de 1 salário",
-        "Com suporte e garantia estendida"
-      ],
-      "CTA": {
-        "href": "#simulacao",
-        "label": "QUERO CANDIDATOS"
+  "sections": {
+    "__resolveType": "website/flags/multivariate.ts",
+    "variants": [
+      {
+        "value": [
+          {
+            "__resolveType": "site/sections/Header.tsx",
+            "navigation": {
+              "links": [
+                {
+                  "label": " The Catena Way",
+                  "url": "/#diferenciais"
+                },
+                {
+                  "label": "How It Works",
+                  "url": "/#como-funciona"
+                },
+                {
+                  "label": "Testimonials",
+                  "url": "/#depoimentos"
+                },
+                {
+                  "label": "Cases",
+                  "url": "/conteudo"
+                }
+              ],
+              "buttons": [],
+              "button": {
+                "label": "I want Candidates",
+                "href": "/#cadastro"
+              },
+              "languages": [
+                {
+                  "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/d92f91f5-2a8b-47b6-955d-2e0b1a8e264e",
+                  "label": "BRA",
+                  "value": "pt"
+                }
+              ]
+            },
+            "logo": {
+              "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/6d36b9c0-0491-4138-87ee-47799519057c",
+              "alt": "Catena",
+              "srcDark": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8cb5d0c3-a313-4a80-b888-cd373c800138"
+            }
+          },
+          {
+            "__resolveType": "site/sections/Hero.tsx",
+            "title": "Candidatos qualificados para sua vaga ",
+            "description": "This text is entirely editable, tailor it freely.",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/cc407ff4-4f6d-479b-829f-c7803eea51b6",
+            "titleUnderline": "em até 72h",
+            "subTitle": "<p>Saia dos bancos de talentos genéricos e descubra recrutamento &amp; seleção feito para você!</p>",
+            "list": [
+              "Perfis completos em até 72 horas",
+              "Por menos de 1 salário",
+              "Com suporte e garantia estendida"
+            ],
+            "CTA": {
+              "href": "#simulacao",
+              "label": "QUERO CANDIDATOS"
+            },
+            "preload": true,
+            "alt": "Catena"
+          },
+          {
+            "__resolveType": "site/sections/Differences.tsx",
+            "title": "<p>Buscando Candidatos Qualificados?</p>",
+            "subTitle": "<p>Recrutar com a Catena é diferente!</p>",
+            "cards": [
+              {
+                "title": "Comece com Candidatos",
+                "content": "<p>Esperar respostas de candidatos? Esqueça! Aqui você tem candidatos prontos para entrevista em 72 horas.</p>"
+              },
+              {
+                "title": "Saia do Passado",
+                "content": "<p>Assertividade de consultoria a preço de plataforma? A Catena reduz em 80% o custo e o tempo de recrutamento.</p>"
+              },
+              {
+                "title": "Contrate sem Medo",
+                "content": "<p>A gente sabe que recrutar é sempre difícil, por isso toda vaga na Catena inclui garantia estendida.</p>"
+              }
+            ],
+            "id": "diferenciais"
+          },
+          {
+            "__resolveType": "site/sections/Companies.tsx",
+            "title": "Empresas que recrutam com a Catena",
+            "icons": [
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/79351660-28a0-478e-835f-b7506c0621fa",
+                "alt": "ALS"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8e53676f-7512-47e2-ad0f-6eb79b37f1f7",
+                "alt": "EST"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e70d78eb-9e72-4ad1-83c1-4d878965f84d",
+                "alt": "bionexo"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8737b3a5-bed7-46b7-a295-45d0cd347ae1",
+                "alt": "Tourinho"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/41841e3d-4bb8-4f98-a033-5969405318be",
+                "alt": "Exati"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/451fd979-0bd2-4ead-9975-13b9284f8027",
+                "alt": "Houer"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/4e694a15-6708-4f00-9add-bf62f6437e6f",
+                "alt": "Minify"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/202693f6-0957-461e-bd5b-06e7b1e303ad",
+                "alt": "Real"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/a59e45f6-feec-4915-89f7-ff1198a47e48",
+                "alt": "Teros"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/5b92d66e-3021-4d88-9b1f-b59d1c9f2469",
+                "alt": "tnsnano"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e09a3aa4-d9e1-4a60-9504-52883f0c5da9",
+                "alt": "Onii"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/c917402b-6098-4662-bd37-a8140a0130ed",
+                "alt": "Winnin"
+              }
+            ],
+            "id": "companies"
+          },
+          {
+            "__resolveType": "site/sections/Data.tsx",
+            "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8cf81d5c-0ea3-49f8-9251-8ef2b2d34089",
+            "alt": "data",
+            "title": "9 em 10 profissionais estão abertos a novas oportunidades",
+            "content": "<p>O mercado de profissionais está em fluxo constante. Apenas 1 em cada 10 profissionais permanecerá em sua equipe este ano.</p>",
+            "progrees": [
+              {
+                "title": "Ativamente buscando oportunidades",
+                "porcentage": 57
+              },
+              {
+                "title": "Consideram novas oportunidades",
+                "porcentage": 33
+              },
+              {
+                "title": "Não consideram novas oportunidades",
+                "porcentage": 10
+              }
+            ],
+            "font": "<p>Fonte: Global Talent Trends 2023</p>"
+          },
+          {
+            "__resolveType": "site/sections/Operation.tsx",
+            "title": "Como funciona o processo com a Catena?",
+            "content": "<p>Um processo de recrutamento assertivo é fundamental para recrutar bem. Aqui na Catena, fazemos todo o todo o trabalho de atração, promoção e seleção de candidatos e você recebe candidatos prontos para entrevista!</p>",
+            "cardsInline": [
+              {
+                "title": "Perfis completos em até 72h",
+                "content": "<p>Em até 72 horas, te entregamos candidatos com a formação, perfil e disponibilidade que você busca</p>"
+              },
+              {
+                "title": "Por menos de 1 salário",
+                "content": "<p>Usando tecnologia, reduzimos drasticamente o custo de recrutamento e a economia vai pra você</p>"
+              },
+              {
+                "title": "Com suporte e garantia estendida",
+                "content": "<p>Ajuda? Oferecemos suporte ao longo do processo e garantia estendida em todas as vagas</p>"
+              }
+            ],
+            "cards": [
+              {
+                "title": "Entendimento",
+                "content": "<p>A partir do descritivo de vaga, desenhamos o perfil que você busca, criamos conteúdos e estratégias para engajar seu público-alvo.</p>"
+              },
+              {
+                "title": "Promoção",
+                "content": "<p>Criamos campanhas e promovemos a vaga nos canais certos, usando tráfego orgânico e pago para colocar sua empresa e vaga na frente dos candidatos.</p>"
+              },
+              {
+                "title": "Seleção",
+                "content": "<p>Monitoramos conversões, cliques, candidaturas, pré-selecionamos e avaliamos os candidatos para chegar a uma lista de perfis qualificados.</p>"
+              },
+              {
+                "title": "Entrevistas",
+                "content": "<p>Você começa aqui! Com os perfis na mão, você já começa seu processo de seleção contactando candidatos qualificados para agendar entrevistas!</p>"
+              }
+            ],
+            "id": "como-funciona"
+          },
+          {
+            "__resolveType": "site/sections/Testimonials.tsx",
+            "title": "Depoimentos",
+            "slides": [
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              }
+            ],
+            "dots": true,
+            "interval": 5,
+            "subTitle": "Veja o que nossos clientes falam da gente!",
+            "idS": "depoimentos"
+          },
+          {
+            "__resolveType": "site/sections/Form.tsx",
+            "title": "Recrutamento profissional pode custar menos do que você pensa!",
+            "titleForm": "VAMOS FAZER UMA SIMULAÇÃO DE PREÇO?",
+            "subTitleForm": "É super simples! Não leva nem 2 minutos.",
+            "formPlaceholder": {
+              "name": "Nome",
+              "whatsapp": "Whatsapp",
+              "position": "Qual profissional você quer contratar?",
+              "wage": "Qual o salário mensal aproximado?",
+              "email": "Seu melhor e-mail"
+            },
+            "CTA": "FAZER SIMULAÇÃO",
+            "id": "cadastro"
+          },
+          {
+            "__resolveType": "site/sections/Faq.tsx",
+            "title": "Ainda tem alguma dúvida?",
+            "description": "Veja nossa sessão de perguntas frequentes.",
+            "questions": [
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              },
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              },
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              },
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              }
+            ]
+          },
+          {
+            "__resolveType": "Footer"
+          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/host.ts"
+        }
       },
-      "preload": true,
-      "alt": "Catena"
-    },
-    {
-      "__resolveType": "site/sections/Differences.tsx",
-      "title": "<p>Buscando Candidatos Qualificados?</p>",
-      "subTitle": "<p>Recrutar com a Catena é diferente!</p>",
-      "cards": [
-        {
-          "title": "Comece com Candidatos",
-          "content": "<p>Esperar respostas de candidatos? Esqueça! Aqui você tem candidatos prontos para entrevista em 72 horas.</p>"
-        },
-        {
-          "title": "Saia do Passado",
-          "content": "<p>Assertividade de consultoria a preço de plataforma? A Catena reduz em 80% o custo e o tempo de recrutamento.</p>"
-        },
-        {
-          "title": "Contrate sem Medo",
-          "content": "<p>A gente sabe que recrutar é sempre difícil, por isso toda vaga na Catena inclui garantia estendida.</p>"
-        }
-      ],
-      "id": "diferenciais"
-    },
-    {
-      "__resolveType": "site/sections/Companies.tsx",
-      "title": "Empresas que recrutam com a Catena",
-      "icons": [
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/79351660-28a0-478e-835f-b7506c0621fa",
-          "alt": "ALS"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8e53676f-7512-47e2-ad0f-6eb79b37f1f7",
-          "alt": "EST"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e70d78eb-9e72-4ad1-83c1-4d878965f84d",
-          "alt": "bionexo"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8737b3a5-bed7-46b7-a295-45d0cd347ae1",
-          "alt": "Tourinho"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/41841e3d-4bb8-4f98-a033-5969405318be",
-          "alt": "Exati"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/451fd979-0bd2-4ead-9975-13b9284f8027",
-          "alt": "Houer"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/4e694a15-6708-4f00-9add-bf62f6437e6f",
-          "alt": "Minify"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/202693f6-0957-461e-bd5b-06e7b1e303ad",
-          "alt": "Real"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/a59e45f6-feec-4915-89f7-ff1198a47e48",
-          "alt": "Teros"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/5b92d66e-3021-4d88-9b1f-b59d1c9f2469",
-          "alt": "tnsnano"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e09a3aa4-d9e1-4a60-9504-52883f0c5da9",
-          "alt": "Onii"
-        },
-        {
-          "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/c917402b-6098-4662-bd37-a8140a0130ed",
-          "alt": "Winnin"
-        }
-      ],
-      "id": "companies"
-    },
-    {
-      "__resolveType": "site/sections/Data.tsx",
-      "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8cf81d5c-0ea3-49f8-9251-8ef2b2d34089",
-      "alt": "data",
-      "title": "9 em 10 profissionais estão abertos a novas oportunidades",
-      "content": "<p>O mercado de profissionais está em fluxo constante. Apenas 1 em cada 10 profissionais permanecerá em sua equipe este ano.</p>",
-      "progrees": [
-        {
-          "title": "Ativamente buscando oportunidades",
-          "porcentage": 57
-        },
-        {
-          "title": "Consideram novas oportunidades",
-          "porcentage": 33
-        },
-        {
-          "title": "Não consideram novas oportunidades",
-          "porcentage": 10
-        }
-      ],
-      "font": "<p>Fonte: Global Talent Trends 2023</p>"
-    },
-    {
-      "__resolveType": "site/sections/Operation.tsx",
-      "title": "Como funciona o processo com a Catena?",
-      "content": "<p>Um processo de recrutamento assertivo é fundamental para recrutar bem. Aqui na Catena, fazemos todo o todo o trabalho de atração, promoção e seleção de candidatos e você recebe candidatos prontos para entrevista!</p>",
-      "cardsInline": [
-        {
-          "title": "Perfis completos em até 72h",
-          "content": "<p>Em até 72 horas, te entregamos candidatos com a formação, perfil e disponibilidade que você busca</p>"
-        },
-        {
-          "title": "Por menos de 1 salário",
-          "content": "<p>Usando tecnologia, reduzimos drasticamente o custo de recrutamento e a economia vai pra você</p>"
-        },
-        {
-          "title": "Com suporte e garantia estendida",
-          "content": "<p>Ajuda? Oferecemos suporte ao longo do processo e garantia estendida em todas as vagas</p>"
-        }
-      ],
-      "cards": [
-        {
-          "title": "Entendimento",
-          "content": "<p>A partir do descritivo de vaga, desenhamos o perfil que você busca, criamos conteúdos e estratégias para engajar seu público-alvo.</p>"
-        },
-        {
-          "title": "Promoção",
-          "content": "<p>Criamos campanhas e promovemos a vaga nos canais certos, usando tráfego orgânico e pago para colocar sua empresa e vaga na frente dos candidatos.</p>"
-        },
-        {
-          "title": "Seleção",
-          "content": "<p>Monitoramos conversões, cliques, candidaturas, pré-selecionamos e avaliamos os candidatos para chegar a uma lista de perfis qualificados.</p>"
-        },
-        {
-          "title": "Entrevistas",
-          "content": "<p>Você começa aqui! Com os perfis na mão, você já começa seu processo de seleção contactando candidatos qualificados para agendar entrevistas!</p>"
-        }
-      ],
-      "id": "como-funciona"
-    },
-    {
-      "__resolveType": "site/sections/Testimonials.tsx",
-      "title": "Depoimentos",
-      "slides": [
-        {
-          "content": {
-            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
-            "position": "Sócio, JL Capacitores",
-            "name": "Giulio Destro",
-            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
-            "alt": "Sócio, JL Capacitores"
+      {
+        "value": [
+          {
+            "__resolveType": "Header"
+          },
+          {
+            "__resolveType": "site/sections/Hero.tsx",
+            "title": "Candidatos qualificados para sua vaga ",
+            "description": "This text is entirely editable, tailor it freely.",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/cc407ff4-4f6d-479b-829f-c7803eea51b6",
+            "titleUnderline": "em até 72h",
+            "subTitle": "<p>Saia dos bancos de talentos genéricos e descubra recrutamento &amp; seleção feito para você!</p>",
+            "list": [
+              "Perfis completos em até 72 horas",
+              "Por menos de 1 salário",
+              "Com suporte e garantia estendida"
+            ],
+            "CTA": {
+              "href": "#simulacao",
+              "label": "QUERO CANDIDATOS"
+            },
+            "preload": true,
+            "alt": "Catena"
+          },
+          {
+            "__resolveType": "site/sections/Differences.tsx",
+            "title": "<p>Buscando Candidatos Qualificados?</p>",
+            "subTitle": "<p>Recrutar com a Catena é diferente!</p>",
+            "cards": [
+              {
+                "title": "Comece com Candidatos",
+                "content": "<p>Esperar respostas de candidatos? Esqueça! Aqui você tem candidatos prontos para entrevista em 72 horas.</p>"
+              },
+              {
+                "title": "Saia do Passado",
+                "content": "<p>Assertividade de consultoria a preço de plataforma? A Catena reduz em 80% o custo e o tempo de recrutamento.</p>"
+              },
+              {
+                "title": "Contrate sem Medo",
+                "content": "<p>A gente sabe que recrutar é sempre difícil, por isso toda vaga na Catena inclui garantia estendida.</p>"
+              }
+            ],
+            "id": "diferenciais"
+          },
+          {
+            "__resolveType": "site/sections/Companies.tsx",
+            "title": "Empresas que recrutam com a Catena",
+            "icons": [
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/79351660-28a0-478e-835f-b7506c0621fa",
+                "alt": "ALS"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8e53676f-7512-47e2-ad0f-6eb79b37f1f7",
+                "alt": "EST"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e70d78eb-9e72-4ad1-83c1-4d878965f84d",
+                "alt": "bionexo"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8737b3a5-bed7-46b7-a295-45d0cd347ae1",
+                "alt": "Tourinho"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/41841e3d-4bb8-4f98-a033-5969405318be",
+                "alt": "Exati"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/451fd979-0bd2-4ead-9975-13b9284f8027",
+                "alt": "Houer"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/4e694a15-6708-4f00-9add-bf62f6437e6f",
+                "alt": "Minify"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/202693f6-0957-461e-bd5b-06e7b1e303ad",
+                "alt": "Real"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/a59e45f6-feec-4915-89f7-ff1198a47e48",
+                "alt": "Teros"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/5b92d66e-3021-4d88-9b1f-b59d1c9f2469",
+                "alt": "tnsnano"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/e09a3aa4-d9e1-4a60-9504-52883f0c5da9",
+                "alt": "Onii"
+              },
+              {
+                "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/c917402b-6098-4662-bd37-a8140a0130ed",
+                "alt": "Winnin"
+              }
+            ],
+            "id": "companies"
+          },
+          {
+            "__resolveType": "site/sections/Data.tsx",
+            "img": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/8cf81d5c-0ea3-49f8-9251-8ef2b2d34089",
+            "alt": "data",
+            "title": "9 em 10 profissionais estão abertos a novas oportunidades",
+            "content": "<p>O mercado de profissionais está em fluxo constante. Apenas 1 em cada 10 profissionais permanecerá em sua equipe este ano.</p>",
+            "progrees": [
+              {
+                "title": "Ativamente buscando oportunidades",
+                "porcentage": 57
+              },
+              {
+                "title": "Consideram novas oportunidades",
+                "porcentage": 33
+              },
+              {
+                "title": "Não consideram novas oportunidades",
+                "porcentage": 10
+              }
+            ],
+            "font": "<p>Fonte: Global Talent Trends 2023</p>"
+          },
+          {
+            "__resolveType": "site/sections/Operation.tsx",
+            "title": "Como funciona o processo com a Catena?",
+            "content": "<p>Um processo de recrutamento assertivo é fundamental para recrutar bem. Aqui na Catena, fazemos todo o todo o trabalho de atração, promoção e seleção de candidatos e você recebe candidatos prontos para entrevista!</p>",
+            "cardsInline": [
+              {
+                "title": "Perfis completos em até 72h",
+                "content": "<p>Em até 72 horas, te entregamos candidatos com a formação, perfil e disponibilidade que você busca</p>"
+              },
+              {
+                "title": "Por menos de 1 salário",
+                "content": "<p>Usando tecnologia, reduzimos drasticamente o custo de recrutamento e a economia vai pra você</p>"
+              },
+              {
+                "title": "Com suporte e garantia estendida",
+                "content": "<p>Ajuda? Oferecemos suporte ao longo do processo e garantia estendida em todas as vagas</p>"
+              }
+            ],
+            "cards": [
+              {
+                "title": "Entendimento",
+                "content": "<p>A partir do descritivo de vaga, desenhamos o perfil que você busca, criamos conteúdos e estratégias para engajar seu público-alvo.</p>"
+              },
+              {
+                "title": "Promoção",
+                "content": "<p>Criamos campanhas e promovemos a vaga nos canais certos, usando tráfego orgânico e pago para colocar sua empresa e vaga na frente dos candidatos.</p>"
+              },
+              {
+                "title": "Seleção",
+                "content": "<p>Monitoramos conversões, cliques, candidaturas, pré-selecionamos e avaliamos os candidatos para chegar a uma lista de perfis qualificados.</p>"
+              },
+              {
+                "title": "Entrevistas",
+                "content": "<p>Você começa aqui! Com os perfis na mão, você já começa seu processo de seleção contactando candidatos qualificados para agendar entrevistas!</p>"
+              }
+            ],
+            "id": "como-funciona"
+          },
+          {
+            "__resolveType": "site/sections/Testimonials.tsx",
+            "title": "Depoimentos",
+            "slides": [
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              },
+              {
+                "content": {
+                  "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
+                  "position": "Sócio, JL Capacitores",
+                  "name": "Giulio Destro",
+                  "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
+                  "alt": "Sócio, JL Capacitores"
+                }
+              }
+            ],
+            "dots": true,
+            "interval": 5,
+            "subTitle": "Veja o que nossos clientes falam da gente!",
+            "idS": "depoimentos"
+          },
+          {
+            "__resolveType": "site/sections/Form.tsx",
+            "title": "Recrutamento profissional pode custar menos do que você pensa!",
+            "titleForm": "VAMOS FAZER UMA SIMULAÇÃO DE PREÇO?",
+            "subTitleForm": "É super simples! Não leva nem 2 minutos.",
+            "formPlaceholder": {
+              "name": "Nome",
+              "whatsapp": "Whatsapp",
+              "position": "Qual profissional você quer contratar?",
+              "wage": "Qual o salário mensal aproximado?",
+              "email": "Seu melhor e-mail"
+            },
+            "CTA": "FAZER SIMULAÇÃO",
+            "id": "cadastro"
+          },
+          {
+            "__resolveType": "site/sections/Faq.tsx",
+            "title": "Ainda tem alguma dúvida?",
+            "description": "Veja nossa sessão de perguntas frequentes.",
+            "questions": [
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              },
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              },
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              },
+              {
+                "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
+                "title": "O que a Catena faz?"
+              }
+            ]
+          },
+          {
+            "__resolveType": "Footer"
           }
-        },
-        {
-          "content": {
-            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
-            "position": "Sócio, JL Capacitores",
-            "name": "Giulio Destro",
-            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
-            "alt": "Sócio, JL Capacitores"
-          }
-        },
-        {
-          "content": {
-            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
-            "position": "Sócio, JL Capacitores",
-            "name": "Giulio Destro",
-            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
-            "alt": "Sócio, JL Capacitores"
-          }
-        },
-        {
-          "content": {
-            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
-            "position": "Sócio, JL Capacitores",
-            "name": "Giulio Destro",
-            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
-            "alt": "Sócio, JL Capacitores"
-          }
-        },
-        {
-          "content": {
-            "description": "“A Catena superou todas as nossas expectativas. Além de nos ajudarem a estruturar o anúncio da vaga de forma clara e objetiva, em menos de uma semana já tínhamos candidatos qualificados para entrevista. O método de divulgação e o funil de candidatos são excelentes e proporcionam economia de tempo e dinheiro. Com certeza voltaremos a trabalhar juntos no futuro.”",
-            "position": "Sócio, JL Capacitores",
-            "name": "Giulio Destro",
-            "avatar": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/164a9db0-4774-417e-a105-a74e9bec8372",
-            "alt": "Sócio, JL Capacitores"
-          }
+        ],
+        "rule": {
+          "__resolveType": "website/matchers/always.ts"
         }
-      ],
-      "dots": true,
-      "interval": 5,
-      "subTitle": "Veja o que nossos clientes falam da gente!",
-      "idS": "depoimentos"
-    },
-    {
-      "__resolveType": "site/sections/Form.tsx",
-      "title": "Recrutamento profissional pode custar menos do que você pensa!",
-      "titleForm": "VAMOS FAZER UMA SIMULAÇÃO DE PREÇO?",
-      "subTitleForm": "É super simples! Não leva nem 2 minutos.",
-      "formPlaceholder": {
-        "name": "Nome",
-        "whatsapp": "Whatsapp",
-        "position": "Qual profissional você quer contratar?",
-        "wage": "Qual o salário mensal aproximado?",
-        "email": "Seu melhor e-mail"
-      },
-      "CTA": "FAZER SIMULAÇÃO",
-      "id": "cadastro"
-    },
-    {
-      "__resolveType": "site/sections/Faq.tsx",
-      "title": "Ainda tem alguma dúvida?",
-      "description": "Veja nossa sessão de perguntas frequentes.",
-      "questions": [
-        {
-          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
-          "title": "O que a Catena faz?"
-        },
-        {
-          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
-          "title": "O que a Catena faz?"
-        },
-        {
-          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
-          "title": "O que a Catena faz?"
-        },
-        {
-          "answer": "<p>A Catena usa Growth Hacking (programação + marketing + métricas) para levar a sua marca e suas vagas aos candidatos certos. Em até 72h, te entregamos candidatos pré-selecionados para a sua vaga.</p>",
-          "title": "O que a Catena faz?"
-        }
-      ]
-    },
-    {
-      "__resolveType": "Footer"
-    }
-  ],
+      }
+    ]
+  },
   "__resolveType": "website/pages/Page.tsx",
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx",

@@ -82,7 +82,7 @@ export default function AnimationScroll({ children }: {
 
   return (
     <div
-      class={`fixed left-0 w-full z-50 duration-300 shadow-sm peer-checked:bg-base-100 ${
+      class={`fixed left-0 right-0 w-full z-50 duration-300 shadow-sm peer-checked:bg-base-100 overflow-hidden  h-max ${
         active.value == "top"
           ? "top-0 text-base-100 bg-primary "
           : active.value == "hidden"

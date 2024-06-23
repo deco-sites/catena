@@ -64,7 +64,7 @@ export default function BlogPosts({
     <div class="w-full h-full bg-neutral py-14" id={id}>
       <div class="flex flex-col gap-10 lg:gap-20 justify-center items-center mx-auto max-w-[1320px] px-4 md:px-14 lg:px-4 font-thicccboi">
         <div class="flex-none space-y-6 lg:w-2/5">
-          <p class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content text-center ">
+          <p class="text-2xl mb-5 font-bold lg:text-[28px] md:mb-7 text-primary-content text-primary-content text-center ">
             {title}
           </p>
           <p class="mb-8 text-[19px] text-center text-base-content font-medium">

@@ -92,4 +92,34 @@
 
 * {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+@keyframes teste {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.revealing-image {
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+  animation: linear teste both;
+  animation-timeline: --revealing-image;
+  animation-range: entry 25% cover 50%;
+  -webkit-animation: linear teste both;
 }
