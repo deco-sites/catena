@@ -21,6 +21,11 @@ export interface Post {
   tags?: string[];
 }
 
+interface Link {
+  label: string;
+  href: string;
+}
+
 export interface Props {
   cta?: CTA;
   posts?: BlogPost[] | null;
@@ -34,7 +39,7 @@ export interface Props {
     perPage?: number;
   };
   descriptionPage: HTMLWidget;
-  categories?: string[]
+  categories?: Link[]
 }
 
 const DEFAULT_IMAGE =
@@ -239,7 +244,7 @@ export default function BlogPosts({
   const arrayPage = Array.from({ length: numberPage }, (_, i) => i + 1)
 
   return (
-    <div class="w-full h-full text-primary-content bg-neutral py-32 font-thicccboi flex flex-col gap-4" id={postList}>
+    <div class="w-full h-full text-primary-content bg-neutral pt-32 pb-20 font-thicccboi flex flex-col gap-4" id={postList}>
       <span class="w-full text-base lg:text-lg text-primary-content mx-auto max-w-[1320px] px-4" dangerouslySetInnerHTML={{ __html: descriptionPage }}></span>
       <div class="flex flex-col lg:flex-row w-full mx-auto max-w-[1320px] px-4 gap-3">
         <div class="gap-8 flex flex-col md:grid-cols-2 bg-neutral w-full" >
@@ -291,8 +296,8 @@ export default function BlogPosts({
           }
           {
             arrayPage.length > 0 && (
-              <div class="flex flex-row gap-4">
-                <div class="flex justify-center w-full" >
+              <div class="flex flex-row gap-4 mx-auto">
+                <div class="flex justify-center w-max" >
                   <button
                     hx-get={prevLink}
                     hx-swap="outerHTML"
@@ -323,11 +328,11 @@ export default function BlogPosts({
                 </div>
                 <ul class="flex flex-row gap-2 justify-center items-center">
                   {arrayPage.map((index) =>
-                    <li class={`${index == page + 1 ? "bg-transparent" : "bg-secondary"} font-bold text-lg h-max p-1 text-primary`}>
+                    <li class={`${index == page + 1 ? "bg-transparent" : "bg-secondary"} font-bold text-lg h-max p-1 px-2 text-primary`}>
                       {index}
                     </li>)}
                 </ul>
-                <div class="flex justify-center w-full" >
+                <div class="flex justify-center w-max" >
                   <button
                     hx-get={fetchMoreLink}
                     hx-swap="outerHTML"
@@ -360,7 +365,7 @@ export default function BlogPosts({
             )
           }
         </div >
-        <div class="w-full lg:w-80 px-2 h-screen font-thicccboi flex flex-col gap-3">
+        <div class="w-full lg:w-80 px-2 h-auto font-thicccboi flex flex-col gap-3">
           <h3 class="text-primary-content text-2xl font-bold">Busque Casses</h3>
           <form class="flex flex-row rounded-lg w-full " >
             <input class="px-3 py-2 bg-base-100 placeholder:text-primary-content" placeholder={"Busque pelo Termo"}>
@@ -374,7 +379,7 @@ export default function BlogPosts({
             </button>
           </form>
           <ul class="flex flex-col w-full gap-2 py-4">
-            {categories?.map((ctg) => <li class="text-base-200 cursor-pointer hover:text-secondary text-base">{ctg}</li>)}
+            {categories?.map((ctg) => <li class="text-base-200 cursor-pointer hover:text-secondary text-base"><a href={ctg.href}>{ctg.label}</a></li>)}
           </ul>
 
         </div>

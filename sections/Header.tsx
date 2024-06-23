@@ -71,7 +71,7 @@ export default function Haader({
 }: Nav) {
   return (
     <AnimationScroll>
-      <nav class=" w-full">
+      <nav class=" w-full mx-auto max-w-[1320px] px-4 md:px-14 lg:px-4">
         <div class="flex gap-8 items-center justify-between py-4 xl:container mx-auto xl:px-0 px-4 min-h-24">
           <a href="/">
             <Image

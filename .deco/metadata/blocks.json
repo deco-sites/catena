@@ -173,5 +173,14 @@
   "/.deco/blocks/Preview%20site%2Floaders%2FBlog%2FCategoryList.tsx.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/Blog/CategoryList.tsx"
+  },
+  "/.deco/blocks/collections%2Fblog%2Fcategories%2F8223abfee4dd.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/Category.ts"
+  },
+  "/.deco/blocks/collections%2Fblog%2Fcategories%2Fc7ed0b0601f6.json": null,
+  "/.deco/blocks/collections%2Fblog%2Fcategories%2F44739ffc610e.json": {
+    "blockType": "loaders",
+    "__resolveType": "blog/loaders/Category.ts"
   }
 }

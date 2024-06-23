@@ -2,13 +2,23 @@
   "name": "collections/blog/posts/173aa7daa089",
   "__resolveType": "blog/loaders/Blogpost.ts",
   "post": {
-    "authors": [{ "name": "Name of the Author", "email": "author@deco.cx" }],
-    "categories": [{ "name": "Customization", "slug": "customization" }],
-    "content": "<h1>Lorem Ipsum Dolor Sit Tiptap</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Nullam faucibus venenatis quam, ut laoreet nisi fermentum eget.</strong> Sed <em>pellentesque</em> egestas odio, <u>quis viverra nunc gravida non</u>. <s>Integer imperdiet ligula et lectus pharetra porta.</s></p><h2>H2: Maecenas Ultrices Ullamcorper Felis</h2><p>Donec <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://www.deco.cx/\">pulvinar</a> magna nec mi sodales, in volutpat tortor pretium. Phasellus <code>consequat</code> libero eu ligula aliquet, id ornare metus ultrices.</p><h3>H3: Aenean sed diam ipsum</h3><ul><li><p>Lorem ipsum dolor sit amet</p></li><li><p>Vestibulum ante ipsum primis</p></li><li><p>Proin accumsan porttitor felis</p></li></ul><h3>H3: Ordered List Example</h3><p>1. Praesent elementum ante nec nibh rhoncus 2. Mauris vel tincidunt turpis 3. Donec a volutpat diam</p><h2>Image Time!</h2><p><img src=\"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/682eb374-def2-4e85-a45d-b3a7ff8a31a9\"></p><h2>Blockquote with a Twist</h2><blockquote><p>Fusce finibus mauris vitae eros tincidunt, vitae vulputate neque egestas. Sed in ex ac urna volutpat ornare.</p><p></p></blockquote><p>Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>",
-    "slug": "lorem-ipsum",
-    "excerpt": "Discover Tiptap's rich formatting options in this whimsical \"lorem ipsum\" inspired blog post.",
-    "title": "Harness the Power of Tiptap: A Lorem Ipsum Inspired Demo",
-    "date": "2024-04-10",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/682eb374-def2-4e85-a45d-b3a7ff8a31a9"
+    "authors": [
+      {
+        "name": "Name of the Author",
+        "email": "author@deco.cx"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Customization",
+        "slug": "customization"
+      }
+    ],
+    "content": "<p>A Asalab é uma empresa dedicada ao desenvolvimento de tecnologia e soluções para a área da saúde. Somos detentores da marca Dentinho da Fada, voltada para crianças e seus sorrisos. Nosso objetivo é proporcionar informações e conhecimento de forma lúdica, incentivando a imaginação das crianças.</p><p>Estávamos buscando expandir nosso time e enfrentávamos dificuldades para encontrar profissionais qualificados para nossa empresa, localizada em Belo Horizonte. Foi quando, através de uma pesquisa no Google, descobrimos a Catena e nos impressionamos com sua abordagem diferenciada. Inicialmente, buscávamos um Assistente de Vendas e, com a ajuda da Catena, conseguimos preencher a vaga em poucos dias.</p><p>Algum tempo depois, buscamos um Gestor de Marketing e, mais uma vez, recorremos à Catena. Em questão de dias, encontramos o profissional certo para a posição, o que nos surpreendeu positivamente.</p><p>Além da eficácia na seleção de candidatos, a Catena também se destaca pela atenção e o profissionalismo em cada etapa do processo. Sentimos que realmente entendem nossas necessidades e estão comprometidos em encontrar os melhores talentos para a nossa empresa.</p><blockquote><p><em>Conseguimos fechar as vagas na Asalab com a Catena em poucos dias. Em ambos os casos onde trabalhamos com eles, ficamos positivamente surpresos com a agilidade na entrega dos candidatos sem a perda de assertividade. Contaremos com a Catena para nossas próximas contratações!”<br></em><strong><em>Bruno Amaral, Co-Founder Asalab</em></strong></p></blockquote>",
+    "slug": "parceria-de-sucesso-asalab-e-catena/",
+    "excerpt": "A Asalab é uma empresa dedicada ao desenvolvimento de tecnologia e soluções para a área da saúde. ",
+    "title": "Parceria de Sucesso: Asalab e Catena",
+    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/1b2f9a04-3d96-42e1-9450-a5ebfa5e8e8a",
+    "date": "2024-06-22"
   }
 }
