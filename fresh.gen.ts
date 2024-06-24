@@ -4,6 +4,9 @@
 
 import * as $_app from "./routes/_app.tsx";
 import * as $Animation_Fade from "./islands/Animation/Fade.tsx";
+import * as $Animation_Operation from "./islands/Animation/Operation.tsx";
+import * as $Animation_Porcentage from "./islands/Animation/Porcentage.tsx";
+import * as $Animation_ProgressBar from "./islands/Animation/ProgressBar.tsx";
 import * as $Button_LanguageButton from "./islands/Button/LanguageButton.tsx";
 import * as $header_AnimationHeader from "./islands/header/AnimationHeader.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -14,6 +17,9 @@ const manifest = {
   },
   islands: {
     "./islands/Animation/Fade.tsx": $Animation_Fade,
+    "./islands/Animation/Operation.tsx": $Animation_Operation,
+    "./islands/Animation/Porcentage.tsx": $Animation_Porcentage,
+    "./islands/Animation/ProgressBar.tsx": $Animation_ProgressBar,
     "./islands/Button/LanguageButton.tsx": $Button_LanguageButton,
     "./islands/header/AnimationHeader.tsx": $header_AnimationHeader,
   },

@@ -1,5 +1,7 @@
 import { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import Animationprogress from "../islands/Animation/ProgressBar.tsx";
+import Porcentage from "../islands/Animation/Porcentage.tsx";
 
 interface ProgressBar {
     title: string;
@@ -34,21 +36,23 @@ export default function Data(props: Props) {
                     <span class="text-base-200 text-[17px] lg:text-lg" dangerouslySetInnerHTML={{ __html: content }}>
 
                     </span>
-                    <ul class="flex flex-col gap-4">
-                        {progrees.map((item) => (
-                            <li class="flex flex-col gap-2">
-                                <div class="flex justify-between">
-                                    <span>{item.title}</span>
-                                    <span>{item.porcentage}%</span>
-                                </div>
-                                <div class="flex w-full rounded-lg h-[6px] bg-[#f1f1f1]">
-                                    <div class="flex h-[6px] rounded-lg" style={{ width: item.porcentage + "%", background: item.porcentage < 30 ? "#e2626b" : item.porcentage < 60 ? "#ffcc00" : "#4dfa7b" }}>
-
+                    <Animationprogress id="progres">
+                        <ul class="flex flex-col gap-4 " id="progres">
+                            {progrees.map((item, index) => (
+                                <li class="flex flex-col gap-2">
+                                    <div class="flex justify-between">
+                                        <span>{item.title}</span>
+                                        <Porcentage number={item.porcentage}/>
                                     </div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                                    <div class="flex w-full rounded-lg h-[6px] bg-[#f1f1f1]">
+                                        <div data-progress class="flex h-[6px] w-0 rounded-lg duration-300" style={{ animationDelay: `${index * .2}s`, maxWidth: item.porcentage + "%", background: item.porcentage < 30 ? "#e2626b" : item.porcentage < 60 ? "#ffcc00" : "#4dfa7b" }}>
+
+                                        </div>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </Animationprogress>
                     <span class="text-sm" dangerouslySetInnerHTML={{ __html: font }}>
                     </span>
                 </div>
