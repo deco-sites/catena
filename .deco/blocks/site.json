@@ -6,12 +6,13 @@
     }
   ],
   "seo": {
-    "titleTemplate": "| Catena",
+    "titleTemplate": "%s | Catena",
     "type": "website",
     "title": "Catena - Recrutamento & Seleção",
     "description": "Candidatos qualificados para sua vaga em 72 horas.",
     "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/afd17904-a394-4a07-a8c4-6dcb6808d259",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/7461baf4-a627-4b5f-a6ce-978374895fbe"
+    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10882/7461baf4-a627-4b5f-a6ce-978374895fbe",
+    "descriptionTemplate": "%s"
   },
   "global": [
     {
