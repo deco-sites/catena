@@ -127,7 +127,7 @@ export default function Haader({
             </div>
           </label>
 
-          <ul class="hidden items-center lg:flex w-full justify-end">
+          <ul class="hidden items-center lg:flex w-full justify-center">
             <ul class="flex">
               {navigation.links.map((link) => (
                 <li>
@@ -144,12 +144,12 @@ export default function Haader({
             </ul>
             <div class="flex gap-5">
               <ButtonLanguage languages={navigation.languages} />
-              <ButtonArrowAnimation
-                label={navigation.button.label}
-                href={navigation.button.href}
-              />
             </div>
           </ul>
+          <ButtonArrowAnimation
+            label={navigation.button.label}
+            href={navigation.button.href}
+          />
         </div>
       </nav>
     </AnimationScroll>

@@ -40,9 +40,9 @@ export default function ButtonArrowAnimation({ label, href }: Props) {
       </style>
       <a
         href={href}
-        class=" rounded-lg uppercase bg-secondary font-thicccboi  text-primary px-6 py-3 font-bold cursor-pointer hidden lg:flex hover:-translate-y-2 duration-200"
+        class=" rounded-lg uppercase bg-secondary font-thicccboi  text-primary px-6 py-3 font-bold cursor-pointer hidden lg:flex hover:-translate-y-2 duration-200 min-w-[247px]"
       >
-        <span class="arrow before:font-unicons before:content-['\e94c']">
+        <span class="arrow before:font-unicons before:content-['\e94c'] w-auto">
         </span>
         {label || "Quero me cadastrar"}
       </a>
