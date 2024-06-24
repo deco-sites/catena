@@ -34,8 +34,6 @@ export default async function BlogPostSearch(
     const { url: baseUrl } = req;
     const url = new URL(baseUrl);
 
-    console.log("search", url.searchParams.get("search"))
-
     const search = url.searchParams.get("search")?.toLocaleLowerCase()
 
     if (!search) {

@@ -8,9 +8,6 @@ export interface Props {
 
 export default function AnimationFade({ id, children }: Props) {
 
-    console.log("children", id)
-
-
     useSignalEffect(() => {
         const root: HTMLElement | null = globalThis.document.querySelector(`#teste`)
         const fadeTop: Array<HTMLElement> | null = root?.querySelectorAll("[data-fadeTop]")

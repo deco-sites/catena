@@ -27,7 +27,6 @@ export default function ({ children, id }: Props) {
             myObserver.observe(progreesbar)
         });
 
-        console.log(root)
     })
 
     return (
