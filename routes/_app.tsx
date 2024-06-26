@@ -29,16 +29,6 @@ export default defineApp(async (_req, ctx) => {
           type="text/css"
           dangerouslySetInnerHTML={{
             __html: `      
-
-                    @font-face {
-            font-family: 'Acumin';
-            src: url("${
-              asset("/fonts/AcuminPro-Regular.woff2")
-            }") format('woff2');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
             
           @font-face {
             font-family: 'THICCCBOI';
