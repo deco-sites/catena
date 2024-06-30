@@ -14,7 +14,7 @@ export default {
       },
       animation: {
         sliding: "sliding 30s linear infinite",
-        slideDown: "slideDown, 3s "
+        slideDown: "slideDown, 3s ",
       },
       keyframes: {
         sliding: {
@@ -22,9 +22,9 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
         slideDown: {
-          'to': { opacity: "0", transform: "translateY(-30px)" },
-          'from': { opacity: "1", transform: "translateY(0)" },
-        }
+          "to": { opacity: "0", transform: "translateY(-30px)" },
+          "from": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       fontSize: {
         "2.5xl": ["1.9rem", {

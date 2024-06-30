@@ -17,7 +17,6 @@ export interface Props {
   cta?: CTA;
   questions?: Question[];
   id?: string;
-
 }
 
 const _DEFAULT_IMAGE =
@@ -26,7 +25,7 @@ const _DEFAULT_IMAGE =
 export default function BlogPosts({
   title = "FAQs",
   description =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
   cta = { id: "change-me", href: "/", text: "Change me", outline: true },
   questions = [
     {
@@ -57,8 +56,7 @@ export default function BlogPosts({
   ],
   id,
 }: Props) {
-
-  const media = Math.round(questions.length / 2)
+  const media = Math.round(questions.length / 2);
 
   return (
     <div class="w-full h-full bg-neutral py-14" id={id}>
@@ -74,7 +72,7 @@ export default function BlogPosts({
         <div class="flex-auto w-full flex flex-col gap-4 lg:flex-row ">
           <div class="w-full h-full flex flex-col gap-4 lg:w-2/4">
             {questions?.map((question, index) => {
-              if (media > index)
+              if (media > index) {
                 return (
                   <details class="rounded-lg group border border-base-200 w-full bg-base-100 p-4">
                     <summary class="text-lg cursor-pointer flex ">
@@ -93,7 +91,9 @@ export default function BlogPosts({
                           />
                         </svg>
                       </span>
-                      <span class="flex-auto font-bold group-hover:text-secondary group-open:text-secondary duration-100">{question.title}</span>
+                      <span class="flex-auto font-bold group-hover:text-secondary group-open:text-secondary duration-100">
+                        {question.title}
+                      </span>
                     </summary>
                     <div class="pl-8 pt-5">
                       <span
@@ -103,13 +103,13 @@ export default function BlogPosts({
                       </span>
                     </div>
                   </details>
-                )
-              else null
+                );
+              } else null;
             })}
           </div>
           <div class="w-full h-full flex flex-col gap-4 lg:w-2/4">
             {questions?.map((question, index) => {
-              if (media <= index)
+              if (media <= index) {
                 return (
                   <details class="rounded-lg group border border-base-200 w-full bg-base-100 p-4">
                     <summary class="text-lg cursor-pointer flex ">
@@ -128,7 +128,9 @@ export default function BlogPosts({
                           />
                         </svg>
                       </span>
-                      <span class="flex-auto font-bold group-hover:text-secondary group-open:text-secondary duration-100">{question.title}</span>
+                      <span class="flex-auto font-bold group-hover:text-secondary group-open:text-secondary duration-100">
+                        {question.title}
+                      </span>
                     </summary>
                     <div class="pl-8 pt-5">
                       <span
@@ -138,12 +140,12 @@ export default function BlogPosts({
                       </span>
                     </div>
                   </details>
-                )
-              else null
+                );
+              } else null;
             })}
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

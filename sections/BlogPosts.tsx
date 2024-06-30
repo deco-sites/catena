@@ -39,7 +39,7 @@ export interface Props {
     perPage?: number;
   };
   descriptionPage: HTMLWidget;
-  categories?: Link[]
+  categories?: Link[];
 }
 
 const DEFAULT_IMAGE =
@@ -241,20 +241,29 @@ export default function BlogPosts({
   const ContainerComponent = page === 0 ? Container : Fragment;
 
   const numberPage = posts && posts?.length / perPage || 0;
-  const arrayPage = Array.from({ length: numberPage }, (_, i) => i + 1)
+  const arrayPage = Array.from({ length: numberPage }, (_, i) => i + 1);
 
   const ACTION = "/conteudo/s";
   const NAME = "search";
 
   return (
-    <div class="w-full h-full text-primary-content bg-neutral pt-32 pb-20 font-thicccboi flex flex-col gap-4" id={postList}>
-      <span class="w-full text-base lg:text-lg text-primary-content mx-auto max-w-[1320px] px-4" dangerouslySetInnerHTML={{ __html: descriptionPage }}></span>
+    <div
+      class="w-full h-full text-primary-content bg-neutral pt-32 pb-20 font-thicccboi flex flex-col gap-4"
+      id={postList}
+    >
+      <span
+        class="w-full text-base lg:text-lg text-primary-content mx-auto max-w-[1320px] px-4 mb-4 lg:mb-6"
+        dangerouslySetInnerHTML={{ __html: descriptionPage }}
+      >
+      </span>
       <div class="flex flex-col lg:flex-row w-full mx-auto max-w-[1320px] px-4 gap-3">
-        <div class="gap-8 flex flex-col md:grid-cols-2 bg-neutral w-full" >
+        <div class="gap-8 flex flex-col md:grid-cols-2 bg-neutral w-full">
           {posts?.slice(from, to).map((post, index) => (
-            <a  
+            <a
               href={`/conteudo/post/${post.slug}`}
-              class={`"overflow-hidden border border-base-200 rounded-lg bg-base-100 flex flex-col md:gap-6 ${index % 2 ? "md:flex-row" : "md:flex-row-reverse"}`}
+              class={`"overflow-hidden border border-base-200 rounded-lg bg-base-100 flex flex-col md:gap-6 ${
+                index % 2 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
             >
               <Image
                 width={330}
@@ -266,7 +275,12 @@ export default function BlogPosts({
                 decoding="async"
                 loading="lazy"
               />
-              <div style={{overflowX: "initial"}} class={`p-3 md:p-5 space-y-4 md:w-2/4 relative  md:before:content-[''] md:before:w-16 md:before:h-16 md:before:bg-base-100 md:before:absolute md:before:top-7  ${index % 2 ? "md:before:-left-14" : "md:before:-right-14"} md:before:rotate-45 md:before:z-[-1] z-10`}>
+              <div
+                style={{ overflowX: "initial" }}
+                class={`p-3 md:p-5 space-y-4 md:w-2/4 relative  md:before:content-[''] md:before:w-16 md:before:h-16 md:before:bg-base-100 md:before:absolute md:before:top-7  ${
+                  index % 2 ? "md:before:-left-14" : "md:before:-right-14"
+                } md:before:rotate-45 md:before:z-[-1] z-10`}
+              >
                 <div class="font-semibold text-secondary">
                   {calculateReadingTime(post.content.split(" ").length)}
                 </div>
@@ -294,87 +308,112 @@ export default function BlogPosts({
                   <span>{post.authors[0]?.name}</span>
                 </div>
               </div>
-            </a >
-          ))
-          }
-          {
-            arrayPage.length > 0 && (
-              <div class="flex flex-row gap-4 mx-auto">
-                <div class="flex justify-center w-max" >
-                  <button
-                    hx-get={prevLink}
-                    hx-swap="outerHTML"
-                    hx-target={`#${postList}`}
-                    aria-label={cta.text}
-                    class="btn px-2 btn-secondary disabled:bg-secondary disabled:opacity-50"
-                    disabled={page == 0}
-                  >
-                    <span class="inline [.htmx-request_&]:hidden">
-                      <span class="flex transition rotate-90 ">
-                        <svg
-                          width="32"
-                          height="33"
-                          viewBox="0 0 32 33"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8.17674 12.5577L8.17676 12.5577L8.5303 12.2041C8.53031 12.2041 8.53031 12.2041 8.53032 12.2041C8.62794 12.1065 8.78621 12.1065 8.88385 12.2041C8.88385 12.2041 8.88385 12.2041 8.88385 12.2041L15.6464 18.9667L16 19.3202L16.3535 18.9667L23.1161 12.2041C23.2138 12.1064 23.372 12.1064 23.4696 12.2041L23.8232 12.5577C23.9208 12.6553 23.9208 12.8135 23.8232 12.9112L16.1767 20.5577C16.0791 20.6553 15.9209 20.6553 15.8232 20.5577L8.17674 12.9112C8.17674 12.9112 8.17674 12.9112 8.17674 12.9112C8.07911 12.8135 8.07911 12.6553 8.17674 12.5577Z"
-                            fill="#fff"
-                            stroke="#fff"
-                          />
-                        </svg>
-                      </span>
+            </a>
+          ))}
+          {arrayPage.length > 0 && (
+            <div class="flex flex-row gap-4 mx-auto">
+              <div class="flex justify-center w-max">
+                <button
+                  hx-get={prevLink}
+                  hx-swap="outerHTML"
+                  hx-target={`#${postList}`}
+                  aria-label={cta.text}
+                  class="btn px-2 btn-secondary disabled:bg-secondary disabled:opacity-50"
+                  disabled={page == 0}
+                >
+                  <span class="inline [.htmx-request_&]:hidden">
+                    <span class="flex transition rotate-90 ">
+                      <svg
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.17674 12.5577L8.17676 12.5577L8.5303 12.2041C8.53031 12.2041 8.53031 12.2041 8.53032 12.2041C8.62794 12.1065 8.78621 12.1065 8.88385 12.2041C8.88385 12.2041 8.88385 12.2041 8.88385 12.2041L15.6464 18.9667L16 19.3202L16.3535 18.9667L23.1161 12.2041C23.2138 12.1064 23.372 12.1064 23.4696 12.2041L23.8232 12.5577C23.9208 12.6553 23.9208 12.8135 23.8232 12.9112L16.1767 20.5577C16.0791 20.6553 15.9209 20.6553 15.8232 20.5577L8.17674 12.9112C8.17674 12.9112 8.17674 12.9112 8.17674 12.9112C8.07911 12.8135 8.07911 12.6553 8.17674 12.5577Z"
+                          fill="#fff"
+                          stroke="#fff"
+                        />
+                      </svg>
                     </span>
-                    <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-                  </button>
-                </div>
-                <ul class="flex flex-row gap-2 justify-center items-center">
-                  {arrayPage.map((index) =>
-                    <li class={`${index == page + 1 ? "bg-transparent" : "bg-secondary"} font-bold text-lg h-max p-1 px-2 text-primary`}>
-                      {index}
-                    </li>)}
-                </ul>
-                <div class="flex justify-center w-max" >
-                  <button
-                    hx-get={fetchMoreLink}
-                    hx-swap="outerHTML"
-                    hx-target={`#${postList}`}
-                    aria-label={cta.text}
-                    class="btn px-2 btn-secondary disabled:bg-secondary disabled:opacity-50"
-                    disabled={page == (arrayPage.length - 1)}
+                  </span>
+                  <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+                </button>
+              </div>
+              <ul class="flex flex-row gap-2 justify-center items-center">
+                {arrayPage.map((index) => (
+                  <li
+                    class={`${
+                      index == page + 1 ? "bg-transparent" : "bg-secondary"
+                    } font-bold text-lg h-max p-1 px-2 text-primary`}
                   >
-                    <span class="inline [.htmx-request_&]:hidden">
-                      <span class="flex transition -rotate-90 ">
-                        <svg
-                          width="32"
-                          height="33"
-                          viewBox="0 0 32 33"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8.17674 12.5577L8.17676 12.5577L8.5303 12.2041C8.53031 12.2041 8.53031 12.2041 8.53032 12.2041C8.62794 12.1065 8.78621 12.1065 8.88385 12.2041C8.88385 12.2041 8.88385 12.2041 8.88385 12.2041L15.6464 18.9667L16 19.3202L16.3535 18.9667L23.1161 12.2041C23.2138 12.1064 23.372 12.1064 23.4696 12.2041L23.8232 12.5577C23.9208 12.6553 23.9208 12.8135 23.8232 12.9112L16.1767 20.5577C16.0791 20.6553 15.9209 20.6553 15.8232 20.5577L8.17674 12.9112C8.17674 12.9112 8.17674 12.9112 8.17674 12.9112C8.07911 12.8135 8.07911 12.6553 8.17674 12.5577Z"
-                            fill="#fff"
-                            stroke="#fff"
-                          />
-                        </svg>
-                      </span>
+                    {index}
+                  </li>
+                ))}
+              </ul>
+              <div class="flex justify-center w-max">
+                <button
+                  hx-get={fetchMoreLink}
+                  hx-swap="outerHTML"
+                  hx-target={`#${postList}`}
+                  aria-label={cta.text}
+                  class="btn px-2 btn-secondary disabled:bg-secondary disabled:opacity-50"
+                  disabled={page == (arrayPage.length - 1)}
+                >
+                  <span class="inline [.htmx-request_&]:hidden">
+                    <span class="flex transition -rotate-90 ">
+                      <svg
+                        width="32"
+                        height="33"
+                        viewBox="0 0 32 33"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.17674 12.5577L8.17676 12.5577L8.5303 12.2041C8.53031 12.2041 8.53031 12.2041 8.53032 12.2041C8.62794 12.1065 8.78621 12.1065 8.88385 12.2041C8.88385 12.2041 8.88385 12.2041 8.88385 12.2041L15.6464 18.9667L16 19.3202L16.3535 18.9667L23.1161 12.2041C23.2138 12.1064 23.372 12.1064 23.4696 12.2041L23.8232 12.5577C23.9208 12.6553 23.9208 12.8135 23.8232 12.9112L16.1767 20.5577C16.0791 20.6553 15.9209 20.6553 15.8232 20.5577L8.17674 12.9112C8.17674 12.9112 8.17674 12.9112 8.17674 12.9112C8.07911 12.8135 8.07911 12.6553 8.17674 12.5577Z"
+                          fill="#fff"
+                          stroke="#fff"
+                        />
+                      </svg>
                     </span>
-                    <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-                  </button>
-                </div>
-              </div >
-            )
-          }
-        </div >
+                  </span>
+                  <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
         <div class="w-full lg:w-80 px-2 h-auto font-thicccboi flex flex-col gap-3">
           <h3 class="text-primary-content text-2xl font-bold">Busque Cases</h3>
-          <form id={"SEARCHBAR_INPUT_FORM_ID"} action={ACTION} class="flex flex-row rounded-lg w-full " >
-            <input class="px-3 py-2 bg-base-100 placeholder:text-primary-content" name={NAME} placeholder={"Busque pelo Termo"}>
+          <form
+            id={"SEARCHBAR_INPUT_FORM_ID"}
+            action={ACTION}
+            class="flex flex-row rounded-lg w-full "
+          >
+            <input
+              class="px-3 py-2 bg-base-100 placeholder:text-primary-content"
+              name={NAME}
+              placeholder={"Busque pelo Termo"}
+            >
             </input>
-            <button for={"SEARCHBAR_INPUT_FORM_ID"} type="submit" class="bg-secondary p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+            <button
+              for={"SEARCHBAR_INPUT_FORM_ID"}
+              type="submit"
+              class="bg-secondary p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+              >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                 <path d="M21 21l-6 -6" />
@@ -382,12 +421,14 @@ export default function BlogPosts({
             </button>
           </form>
           <ul class="flex flex-col w-full gap-2 py-4">
-            {categories?.map((ctg) => <li class="text-base-200 cursor-pointer hover:text-secondary text-base"><a href={ctg.href}>{ctg.label}</a></li>)}
+            {categories?.map((ctg) => (
+              <li class="text-base-200 cursor-pointer hover:text-secondary text-base">
+                <a href={ctg.href}>{ctg.label}</a>
+              </li>
+            ))}
           </ul>
-
         </div>
       </div>
     </div>
-
   );
 }

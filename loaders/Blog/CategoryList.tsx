@@ -6,15 +6,14 @@ const COLLECTION_PATH = "collections/blog/categories";
 const ACCESSOR = "category";
 
 export default async function CategoryList(
-    _req: Request,
-    ctx: AppContext,
+  _req: Request,
+  ctx: AppContext,
 ): Promise<Category[] | null> {
-    const categorys = await getRecordsByPath<Category>(
-        ctx,
-        COLLECTION_PATH,
-        ACCESSOR,
-    );
+  const categorys = await getRecordsByPath<Category>(
+    ctx,
+    COLLECTION_PATH,
+    ACCESSOR,
+  );
 
-    return categorys;
-
+  return categorys;
 }

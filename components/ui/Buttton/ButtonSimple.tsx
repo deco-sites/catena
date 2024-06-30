@@ -13,7 +13,7 @@ export default function ButtonSimple(
       data-fadeTop
       href={href}
       onClick={action}
-      style={{animationDelay : "2.5s"}}
+      style={{ animationDelay: "2.5s" }}
       class={"rounded-lg uppercase px-6 py-3 font-bold cursor-pointer " +
         __class}
     >

@@ -15,8 +15,6 @@ export interface Props {
 }
 
 export default function ButtonLanguage({ languages }: Props) {
-
-
   function setCookie(name: string, value: string, days: number) {
     let expires = "";
     if (days) {
@@ -29,9 +27,8 @@ export default function ButtonLanguage({ languages }: Props) {
 
   function Language(value: string) {
     setCookie("language", value, 7);
-    globalThis.window.location.reload()
+    globalThis.window.location.reload();
   }
-
 
   return (
     <button class="w-" onClick={() => Language(languages[0].value)}>

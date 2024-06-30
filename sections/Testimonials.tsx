@@ -38,7 +38,6 @@ export interface Props {
    */
   interval?: number;
   idS?: string;
-
 }
 
 const DEFAULT_PROPS = {
@@ -116,7 +115,9 @@ function SliderItem(
       class="relative overflow-y-hidden w-full min-h-[292px] bg-base-100"
     >
       <div class="flex flex-col justify-center gap-5 p-8 border border-base-200 text-base-content rounded-2xl h-full max-w-[600px]">
-        <p class=" relative blockquote before:font-unicons before:content-['\201d'] text-[15px] leading-[28px]">{content?.description}</p>
+        <p class=" relative blockquote before:font-unicons before:content-['\201d'] text-[15px] leading-[28px]">
+          {content?.description}
+        </p>
         <div class="flex items-center gap-5">
           <Image
             class="object-cover w-[70px] h-[70px] rounded-full"
@@ -126,12 +127,14 @@ function SliderItem(
             height={70}
           />
           <div class="flex flex-col">
-            <p class="font-bold text-[19px] text-primary-content">{content?.name}</p>
+            <p class="font-bold text-[19px] text-primary-content">
+              {content?.name}
+            </p>
             <p class="text-[17px]">{content?.position}</p>
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 
@@ -196,11 +199,13 @@ function Buttons() {
 
 function Carousel(props: Props) {
   const id = useId();
-  const { title, slides, interval, subTitle, idS } = { ...DEFAULT_PROPS, ...props };
+  const { title, slides, interval, subTitle, idS } = {
+    ...DEFAULT_PROPS,
+    ...props,
+  };
 
   return (
     <section class="w-full h-full bg-neutral" id={idS}>
-
       <div
         id={id}
         class="min-h-min flex flex-col w-full container lg:mx-auto lg:max-w-[1320px] px-4 md:px-14 lg:px-4 py-12 lg:py-28 justify-center items-center font-thicccboi"
@@ -234,7 +239,6 @@ function Carousel(props: Props) {
         </div>
       </div>
     </section>
-
   );
 }
 
